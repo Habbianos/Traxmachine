@@ -1,3 +1,9 @@
+2023-09-12T15:28:58-03:00 fb03fc40f5705dab59c5b324743727b5f79c9698 fet: add traxplayer original implementation
+2023-09-12T10:21:43-03:00 a499e9ee72eb6cbe0905264f2fb6b819c4e481b4 chore: update repo files
+2023-09-12T09:57:37-03:00 1f7dda8b4cf44033286b9e64afdf23a8f655ec7e chore: move editor to components folder
+2023-09-08T12:54:43-03:00 e2b158023819acec98ded170ecc89a4aff04890b chore: create LICENSE
+2023-09-07T13:53:48-03:00 075f82c225e135e7f0c64e7a4eace152ba192a1d chore: generate changelog script
+2023-09-07T13:51:27-03:00 2586646791ff7226e47140fb174266744f53b9e0 chore: updated changelog
 2023-09-07T13:50:35-03:00 5e1fcd4874e9cb9a8f05282384bbd1e61346d834 fet: analyze music (no UI)
 2023-09-07T12:46:15-03:00 76102bd08bf80faa0bfa16d4c7ef90f0cf129b16 chore: updated changelog
 2023-09-07T12:42:25-03:00 06ce5c4a04d74b0979a0ed3c8c0b52965ad9a265 fix: not-chrome banner
