@@ -1,8 +1,4 @@
-On this page:
-
-[[_TOC_]]
-
----
+# sound_set_45
 
 ## Image
 
@@ -28,12 +24,12 @@ On this page:
 
 ## Sounds
 
-1. ![Sample 397](../uploads/sounds/sound_machine_sample_397.mp3)
-1. ![Sample 398](../uploads/sounds/sound_machine_sample_398.mp3)
-1. ![Sample 399](../uploads/sounds/sound_machine_sample_399.mp3)
-1. ![Sample 400](../uploads/sounds/sound_machine_sample_400.mp3)
-1. ![Sample 401](../uploads/sounds/sound_machine_sample_401.mp3)
-1. ![Sample 402](../uploads/sounds/sound_machine_sample_402.mp3)
-1. ![Sample 403](../uploads/sounds/sound_machine_sample_403.mp3)
-1. ![Sample 404](../uploads/sounds/sound_machine_sample_404.mp3)
-1. ![Sample 405](../uploads/sounds/sound_machine_sample_405.mp3)
+1. [Sample 397](../uploads/sounds/sound_machine_sample_397.mp3)
+1. [Sample 398](../uploads/sounds/sound_machine_sample_398.mp3)
+1. [Sample 399](../uploads/sounds/sound_machine_sample_399.mp3)
+1. [Sample 400](../uploads/sounds/sound_machine_sample_400.mp3)
+1. [Sample 401](../uploads/sounds/sound_machine_sample_401.mp3)
+1. [Sample 402](../uploads/sounds/sound_machine_sample_402.mp3)
+1. [Sample 403](../uploads/sounds/sound_machine_sample_403.mp3)
+1. [Sample 404](../uploads/sounds/sound_machine_sample_404.mp3)
+1. [Sample 405](../uploads/sounds/sound_machine_sample_405.mp3)

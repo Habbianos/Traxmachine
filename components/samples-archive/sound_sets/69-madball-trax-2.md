@@ -1,8 +1,4 @@
-On this page:
-
-[[_TOC_]]
-
----
+# sound_set_69
 
 ## Image
 
@@ -28,12 +24,12 @@ On this page:
 
 ## Sounds
 
-1. ![Sample 613](../uploads/sounds/sound_machine_sample_613.mp3)
-1. ![Sample 614](../uploads/sounds/sound_machine_sample_614.mp3)
-1. ![Sample 615](../uploads/sounds/sound_machine_sample_615.mp3)
-1. ![Sample 616](../uploads/sounds/sound_machine_sample_616.mp3)
-1. ![Sample 617](../uploads/sounds/sound_machine_sample_617.mp3)
-1. ![Sample 618](../uploads/sounds/sound_machine_sample_618.mp3)
-1. ![Sample 619](../uploads/sounds/sound_machine_sample_619.mp3)
-1. ![Sample 620](../uploads/sounds/sound_machine_sample_620.mp3)
-1. ![Sample 621](../uploads/sounds/sound_machine_sample_621.mp3)
+1. [Sample 613](../uploads/sounds/sound_machine_sample_613.mp3)
+1. [Sample 614](../uploads/sounds/sound_machine_sample_614.mp3)
+1. [Sample 615](../uploads/sounds/sound_machine_sample_615.mp3)
+1. [Sample 616](../uploads/sounds/sound_machine_sample_616.mp3)
+1. [Sample 617](../uploads/sounds/sound_machine_sample_617.mp3)
+1. [Sample 618](../uploads/sounds/sound_machine_sample_618.mp3)
+1. [Sample 619](../uploads/sounds/sound_machine_sample_619.mp3)
+1. [Sample 620](../uploads/sounds/sound_machine_sample_620.mp3)
+1. [Sample 621](../uploads/sounds/sound_machine_sample_621.mp3)

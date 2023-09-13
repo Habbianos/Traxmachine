@@ -1,8 +1,4 @@
-On this page:
-
-[[_TOC_]]
-
----
+# sound_set_16
 
 ## Image
 
@@ -28,12 +24,12 @@ On this page:
 
 ## Sounds
 
-1. ![Sample 136](../uploads/sounds/sound_machine_sample_136.mp3)
-1. ![Sample 137](../uploads/sounds/sound_machine_sample_137.mp3)
-1. ![Sample 138](../uploads/sounds/sound_machine_sample_138.mp3)
-1. ![Sample 139](../uploads/sounds/sound_machine_sample_139.mp3)
-1. ![Sample 140](../uploads/sounds/sound_machine_sample_140.mp3)
-1. ![Sample 141](../uploads/sounds/sound_machine_sample_141.mp3)
-1. ![Sample 142](../uploads/sounds/sound_machine_sample_142.mp3)
-1. ![Sample 143](../uploads/sounds/sound_machine_sample_143.mp3)
-1. ![Sample 144](../uploads/sounds/sound_machine_sample_144.mp3)
+1. [Sample 136](../uploads/sounds/sound_machine_sample_136.mp3)
+1. [Sample 137](../uploads/sounds/sound_machine_sample_137.mp3)
+1. [Sample 138](../uploads/sounds/sound_machine_sample_138.mp3)
+1. [Sample 139](../uploads/sounds/sound_machine_sample_139.mp3)
+1. [Sample 140](../uploads/sounds/sound_machine_sample_140.mp3)
+1. [Sample 141](../uploads/sounds/sound_machine_sample_141.mp3)
+1. [Sample 142](../uploads/sounds/sound_machine_sample_142.mp3)
+1. [Sample 143](../uploads/sounds/sound_machine_sample_143.mp3)
+1. [Sample 144](../uploads/sounds/sound_machine_sample_144.mp3)
