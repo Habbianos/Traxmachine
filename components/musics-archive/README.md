@@ -1,3 +1,9 @@
+# Musics Archive
+
+Information about the songs that were created in Trax
+
+---
+
 ## Internal musics
 
 Inside the Traxmachine, you could save up to 50 songs, and select up to 5 of these and save in the playlist to be played when the machine is on. To save more musics, you needed to burn one disc (for each music) and/or delete them from the Trax menu.
