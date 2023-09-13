@@ -16,7 +16,7 @@
 
 # Traxmachine: Criação Musical no Habbo
 
-A Traxmachine, que fez sua estreia no hotel finlandês em março de 2007, deixou uma marca permanente na experiência do Habbo. Ela introduziu o conceito de música gerada pelo usuário, permitindo que os jogadores criem e compartilhem suas músicas exclusivas. Este repositório serve como uma coleção abrangente de componentes essenciais para a criação de música no mundo Habbo, incluindo o Editor Trax, Reprodutor Trax, Arquivo de Sons e Arquivo de Músicas.
+A Traxmachine, que fez sua estreia no hotel finlandês em março de 2007, deixou uma marca permanente na experiência do Habbo. Ela introduziu o conceito de música gerada pelo usuário, permitindo que os jogadores criem e compartilhem suas músicas exclusivas. Este repositório serve como uma coleção abrangente de componentes essenciais para a criação de música no mundo Habbo, incluindo o Editor Trax, Reprodutor Trax, [Arquivo de Sons](/components/samples-archive/README.md) e [Arquivo de Músicas](/components/musics-archive/README.md).
 
 ## Trax: Uma Breve História
 

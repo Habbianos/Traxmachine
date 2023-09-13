@@ -16,7 +16,7 @@
 
 # Traxmachine: Musik erstellen im Habbo
 
-Die Traxmachine, die im März 2007 im finnischen Hotel debütierte, hat einen bleibenden Eindruck auf die Habbo-Erfahrung hinterlassen. Sie führte das Konzept der benutzererzeugten Musik ein und ermöglichte es den Spielern, ihre eigenen einzigartigen Melodien zu erstellen und zu teilen. Dieses Repository dient als umfassende Sammlung von Komponenten, die für die Musikproduktion in der Habbo-Welt unerlässlich sind, darunter der Trax Editor, Trax Player, Samples-Archiv und Musik-Archiv.
+Die Traxmachine, die im März 2007 im finnischen Hotel debütierte, hat einen bleibenden Eindruck auf die Habbo-Erfahrung hinterlassen. Sie führte das Konzept der benutzererzeugten Musik ein und ermöglichte es den Spielern, ihre eigenen einzigartigen Melodien zu erstellen und zu teilen. Dieses Repository dient als umfassende Sammlung von Komponenten, die für die Musikproduktion in der Habbo-Welt unerlässlich sind, darunter der Trax Editor, Trax Player, [Samples-Archiv](/components/samples-archive/README.md) und [Musik-Archiv](/components/musics-archive/README.md).
 
 ## Trax: Eine kurze Geschichte
 

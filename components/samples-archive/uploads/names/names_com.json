@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Habbo Sounds 1",
+		"description": "Get your party started!"
+	},
+	"sound_set_2": {
+		"name": "Habbo Sounds 3",
+		"description": "Get your party started again!"
+	},
+	"sound_set_3": {
+		"name": "Electronic 1",
+		"description": "Bust your saxophone"
+	},
+	"sound_set_4": {
+		"name": "Ambient 1",
+		"description": "Lay back and relax"
+	},
+	"sound_set_5": {
+		"name": "Ambient 4",
+		"description": "Creepy crawly sound effects"
+	},
+	"sound_set_6": {
+		"name": "Ambient 3",
+		"description": "Sounds of nature in your room."
+	},
+	"sound_set_7": {
+		"name": "SFX 5",
+		"description": "Your furni come to life"
+	},
+	"sound_set_8": {
+		"name": "Ambient 2",
+		"description": "Get your Rave started"
+	},
+	"sound_set_9": {
+		"name": "Electronic 2",
+		"description": "Magically delicious"
+	},
+	"sound_set_10": {
+		"name": "Hip Hop Beats 1",
+		"description": "Cute boys crooning tunes"
+	},
+	"sound_set_11": {
+		"name": "Dance 4",
+		"description": "Very spicy"
+	},
+	"sound_set_12": {
+		"name": "Habbo Sounds 2",
+		"description": "Check it out"
+	},
+	"sound_set_13": {
+		"name": "Dance 5",
+		"description": "Check it out"
+	},
+	"sound_set_14": {
+		"name": "Hip hop Beats 2",
+		"description": "Check it out"
+	},
+	"sound_set_15": {
+		"name": "RnB Grooves 6",
+		"description": "Check it out"
+	},
+	"sound_set_16": {
+		"name": "Hip hop Beats 3",
+		"description": "Check it out"
+	},
+	"sound_set_17": {
+		"name": "",
+		"description": ""
+	},
+	"sound_set_18": {
+		"name": "Little Tanga Beach",
+		"description": ""
+	},
+	"sound_set_19": {
+		"name": "MnM",
+		"description": ""
+	},
+	"sound_set_20": {
+		"name": "Monkey Paradise",
+		"description": ""
+	},
+	"sound_set_21": {
+		"name": "Snotty Day",
+		"description": ""
+	},
+	"sound_set_22": {
+		"name": "A Day In Park",
+		"description": ""
+	},
+	"sound_set_23": {
+		"name": "Nature Nightlife",
+		"description": ""
+	},
+	"sound_set_24": {
+		"name": "Compu FX",
+		"description": ""
+	},
+	"sound_set_25": {
+		"name": "Party Pack",
+		"description": ""
+	},
+	"sound_set_26": {
+		"name": "Bhangra Mangra",
+		"description": ""
+	},
+	"sound_set_27": {
+		"name": "Rasta.Claus's Pack",
+		"description": ""
+	},
+	"sound_set_28": {
+		"name": "Moshy Metal",
+		"description": ""
+	},
+	"sound_set_29": {
+		"name": "Dance 2",
+		"description": ""
+	},
+	"sound_set_30": {
+		"name": "Instrumental 1",
+		"description": ""
+	},
+	"sound_set_31": {
+		"name": "Dance 3",
+		"description": ""
+	},
+	"sound_set_32": {
+		"name": "Instrumental 2",
+		"description": ""
+	},
+	"sound_set_33": {
+		"name": "Rock 3",
+		"description": ""
+	},
+	"sound_set_34": {
+		"name": "Rock 5",
+		"description": ""
+	},
+	"sound_set_35": {
+		"name": "Dance 6",
+		"description": ""
+	},
+	"sound_set_36": {
+		"name": "Bossa Nueva",
+		"description": ""
+	},
+	"sound_set_37": {
+		"name": "Sound set 37",
+		"description": ""
+	},
+	"sound_set_38": {
+		"name": "Rock 6",
+		"description": "Some weighty riffs!"
+	},
+	"sound_set_39": {
+		"name": "Rock 7",
+		"description": "Let it Scream!"
+	},
+	"sound_set_40": {
+		"name": "Rock 4",
+		"description": "A glam rock flashback."
+	},
+	"sound_set_41": {
+		"name": "Rock 8",
+		"description": "by the Rolling Loops..."
+	},
+	"sound_set_42": {
+		"name": "Sound set 42",
+		"description": ""
+	},
+	"sound_set_43": {
+		"name": "SFX 1",
+		"description": ""
+	},
+	"sound_set_44": {
+		"name": "Sound set 44",
+		"description": ""
+	},
+	"sound_set_45": {
+		"name": "Berlin Connection",
+		"description": ""
+	},
+	"sound_set_46": {
+		"name": "Club 1",
+		"description": ""
+	},
+	"sound_set_47": {
+		"name": "Club 2",
+		"description": ""
+	},
+	"sound_set_48": {
+		"name": "Club 3",
+		"description": ""
+	},
+	"sound_set_49": {
+		"name": "Club 4",
+		"description": ""
+	},
+	"sound_set_50": {
+		"name": "Club 5",
+		"description": ""
+	},
+	"sound_set_51": {
+		"name": "Club 6",
+		"description": ""
+	},
+	"sound_set_52": {
+		"name": "Club 7",
+		"description": ""
+	},
+	"sound_set_53": {
+		"name": "Oh Holy Habbo",
+		"description": ""
+	},
+	"sound_set_54": {
+		"name": "Rudolph's Loops",
+		"description": ""
+	},
+	"sound_set_55": {
+		"name": "RnB Grooves 1",
+		"description": "Dance the night away..."
+	},
+	"sound_set_56": {
+		"name": "RnB Grooves 2",
+		"description": "Dance Dance Dance"
+	},
+	"sound_set_57": {
+		"name": "RnB Grooves 3",
+		"description": "Shake! Dance!"
+	},
+	"sound_set_58": {
+		"name": "RnB Grooves 4",
+		"description": "Fresh Beats"
+	},
+	"sound_set_59": {
+		"name": "RnB Grooves 5",
+		"description": "Hot Dance Beats"
+	},
+	"sound_set_60": {
+		"name": "Latin 1",
+		"description": "Hot and romantic"
+	},
+	"sound_set_61": {
+		"name": "Latin 2",
+		"description": "Loveboat Soundtrack"
+	},
+	"sound_set_62": {
+		"name": "Trax Alhambra 1",
+		"description": ""
+	},
+	"sound_set_63": {
+		"name": "Trax Alhambra 2",
+		"description": ""
+	},
+	"sound_set_64": {
+		"name": "Trax Alhambra 3",
+		"description": ""
+	},
+	"sound_set_65": {
+		"name": "Tiki Trax Pack 1",
+		"description": ""
+	},
+	"sound_set_66": {
+		"name": "Tiki Trax Pack 2",
+		"description": ""
+	},
+	"sound_set_67": {
+		"name": "Tiki Trax Pack 3",
+		"description": ""
+	},
+	"sound_set_68": {
+		"name": "Madball Trax 1",
+		"description": ""
+	},
+	"sound_set_69": {
+		"name": "Madball Trax 2",
+		"description": ""
+	},
+	"sound_set_70": {
+		"name": "Madball Trax 3",
+		"description": ""
+	},
+	"sound_set_71": {
+		"name": "Sound set 71",
+		"description": ""
+	},
+	"sound_set_72": {
+		"name": "Country Trax Pack",
+		"description": "Hootenanny sounds of the country."
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

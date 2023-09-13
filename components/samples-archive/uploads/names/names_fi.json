@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Habbo Sounds 1",
+		"description": "Rokkaavia bilesoundeja"
+	},
+	"sound_set_2": {
+		"name": "Habbo Sounds 3",
+		"description": "Klassikkosoundeja Habbosta"
+	},
+	"sound_set_3": {
+		"name": "Electronic 1",
+		"description": "8bit mielipuolista musaa"
+	},
+	"sound_set_4": {
+		"name": "Ambient 1",
+		"description": "Chillaaviin hetkiin"
+	},
+	"sound_set_5": {
+		"name": "Ambient 4",
+		"description": "Tummia Habbo-sävyjä"
+	},
+	"sound_set_6": {
+		"name": "Ambient 3",
+		"description": "Ambient luuppeja taustalle"
+	},
+	"sound_set_7": {
+		"name": "SFX 5",
+		"description": "Ääniä joita tavarat rakastavat"
+	},
+	"sound_set_8": {
+		"name": "Ambient 2",
+		"description": "Melleviä electro soundeja"
+	},
+	"sound_set_9": {
+		"name": "Electronic 2",
+		"description": "Mystisiä ambient soundeja"
+	},
+	"sound_set_10": {
+		"name": "Hip Hop Beats 1",
+		"description": "Moderneja hittisoundeja"
+	},
+	"sound_set_11": {
+		"name": "Dance 4",
+		"description": "D.I.S.C.O. grooveja"
+	},
+	"sound_set_12": {
+		"name": "Habbo Sounds 2",
+		"description": "Avomieliselle"
+	},
+	"sound_set_13": {
+		"name": "Dance 5",
+		"description": "Kevyttä muzakkia"
+	},
+	"sound_set_14": {
+		"name": "Hip Hop Beats 2",
+		"description": "Just IN -grooveja"
+	},
+	"sound_set_15": {
+		"name": "RnB Grooves 6",
+		"description": "R'n'B:tä"
+	},
+	"sound_set_16": {
+		"name": "Hip Hop Beats 3",
+		"description": "Siistejä soundeja"
+	},
+	"sound_set_17": {
+		"name": "Groove 3",
+		"description": "Funkeja discolooppeja"
+	},
+	"sound_set_18": {
+		"name": "Groove 4",
+		"description": "Brasilialaisia soundeja"
+	},
+	"sound_set_19": {
+		"name": "Hip Hop Beats 4",
+		"description": "Pulleaa funkia"
+	},
+	"sound_set_20": {
+		"name": "SFX 2",
+		"description": "Viidakon ääniä"
+	},
+	"sound_set_21": {
+		"name": "Rock 1",
+		"description": "Sukkahousuriffejä"
+	},
+	"sound_set_22": {
+		"name": "SFX 3",
+		"description": "Luonnon ääniä"
+	},
+	"sound_set_23": {
+		"name": "SFX 4",
+		"description": "Heinäsirkkoja ja pöllöjä"
+	},
+	"sound_set_24": {
+		"name": "Habbo Sounds 4",
+		"description": "Sci-fi surinaa"
+	},
+	"sound_set_25": {
+		"name": "Dance 1",
+		"description": "Iloista bilemusaa"
+	},
+	"sound_set_26": {
+		"name": "Groove 1",
+		"description": "Bollywood-soundeja"
+	},
+	"sound_set_27": {
+		"name": "Groove 2",
+		"description": "Reggae Okay"
+	},
+	"sound_set_28": {
+		"name": "Rock 2",
+		"description": "Moshaajalle"
+	},
+	"sound_set_29": {
+		"name": "Dance 2",
+		"description": "Electronic house"
+	},
+	"sound_set_30": {
+		"name": "Instrumental 1",
+		"description": "Lemmen hetkiin"
+	},
+	"sound_set_31": {
+		"name": "Dance 3",
+		"description": "Klubbaajille"
+	},
+	"sound_set_32": {
+		"name": "Instrumental 2",
+		"description": "Pianokonserttoa"
+	},
+	"sound_set_33": {
+		"name": "Rock 3",
+		"description": "Kitarasooloilua"
+	},
+	"sound_set_34": {
+		"name": "Rock 5",
+		"description": "Kitarasankareille"
+	},
+	"sound_set_35": {
+		"name": "Dance 6",
+		"description": "Groovelicious"
+	},
+	"sound_set_36": {
+		"name": "Latin 1",
+		"description": "Aikuiseen makuun"
+	},
+	"sound_set_37": {
+		"name": "Habbowood",
+		"description": "Leffamusaa"
+	},
+	"sound_set_38": {
+		"name": "Rock 6",
+		"description": "Lahkeet tutisemaan"
+	},
+	"sound_set_39": {
+		"name": "Rock 7",
+		"description": "Glam Rock flashback"
+	},
+	"sound_set_40": {
+		"name": "Rock 4",
+		"description": "Let It Scream!"
+	},
+	"sound_set_41": {
+		"name": "Rock 8",
+		"description": "Rankkoja soundeja"
+	},
+	"sound_set_42": {
+		"name": "Snouthill Horror",
+		"description": "Hyytäviä soundeja"
+	},
+	"sound_set_43": {
+		"name": "SFX 1",
+		"description": "Kauhusoundeja"
+	},
+	"sound_set_44": {
+		"name": "Ghost Story",
+		"description": "Kummajaismusaa"
+	},
+	"sound_set_45": {
+		"name": "Berlin Connection",
+		"description": "Techno soundeja"
+	},
+	"sound_set_46": {
+		"name": "Club 1",
+		"description": "Club-soundeja"
+	},
+	"sound_set_47": {
+		"name": "Club 2",
+		"description": "Loco Electro"
+	},
+	"sound_set_48": {
+		"name": "Club 3",
+		"description": "Jackin' Chicago"
+	},
+	"sound_set_49": {
+		"name": "Club 4",
+		"description": "Maximum Minimal"
+	},
+	"sound_set_50": {
+		"name": "Club 5",
+		"description": "Nu Skool Breakz"
+	},
+	"sound_set_51": {
+		"name": "Club 6",
+		"description": "NYC Beat"
+	},
+	"sound_set_52": {
+		"name": "Club 7",
+		"description": "Techno soundeja"
+	},
+	"sound_set_53": {
+		"name": "Oh holy Habbo",
+		"description": "Joulun pyhiä soundeja"
+	},
+	"sound_set_54": {
+		"name": "Rudolph's Loops",
+		"description": "Punakuonon soundeja"
+	},
+	"sound_set_55": {
+		"name": "RnB Grooves 1",
+		"description": ""
+	},
+	"sound_set_56": {
+		"name": "RnB Grooves 2",
+		"description": ""
+	},
+	"sound_set_57": {
+		"name": "RnB Grooves 3",
+		"description": ""
+	},
+	"sound_set_58": {
+		"name": "RnB Grooves 4",
+		"description": ""
+	},
+	"sound_set_59": {
+		"name": "RnB Grooves 5",
+		"description": ""
+	},
+	"sound_set_60": {
+		"name": "Latin 3",
+		"description": "Kuumaa ja romanttista"
+	},
+	"sound_set_61": {
+		"name": "Latin 2",
+		"description": "Lemmenristelymusaa"
+	},
+	"sound_set_62": {
+		"name": "Alhambra 1",
+		"description": "Arabilaisia soundeja"
+	},
+	"sound_set_63": {
+		"name": "Alhambra 2",
+		"description": "Itämaisia soundeja"
+	},
+	"sound_set_64": {
+		"name": "Alhambra 3",
+		"description": "Soundeja käärmeen lumoamiseen"
+	},
+	"sound_set_65": {
+		"name": "Tiki 1",
+		"description": "Heimorituaaleihin"
+	},
+	"sound_set_66": {
+		"name": "Tiki 2",
+		"description": "Rantamenoihin"
+	},
+	"sound_set_67": {
+		"name": "Tiki 3",
+		"description": "Alkukantaisia soundeja"
+	},
+	"sound_set_68": {
+		"name": "Madball 1",
+		"description": "Futissoundeja"
+	},
+	"sound_set_69": {
+		"name": "Madball 2",
+		"description": "Futissoundeja"
+	},
+	"sound_set_70": {
+		"name": "Madball 3",
+		"description": "Futissoundeja"
+	},
+	"sound_set_71": {
+		"name": "Arctic sounds",
+		"description": "Talvisia soundeja"
+	},
+	"sound_set_72": {
+		"name": "Kantri",
+		"description": "Maalaissoundeja"
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

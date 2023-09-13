@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Dunk funk",
+		"description": "9 samples très disco"
+	},
+	"sound_set_2": {
+		"name": "Break dance",
+		"description": "A mixer avant consommation"
+	},
+	"sound_set_3": {
+		"name": "Battle Bell",
+		"description": "Neuf boucles bondissantes"
+	},
+	"sound_set_4": {
+		"name": "Cool ambiance",
+		"description": "Pour un appart zen"
+	},
+	"sound_set_5": {
+		"name": "Musique d'horreur",
+		"description": "AAAAAAAAAAAAAAh !"
+	},
+	"sound_set_6": {
+		"name": "Ambiance nature",
+		"description": "Prise de son faite aux Jardins Unicef"
+	},
+	"sound_set_7": {
+		"name": "Mobi musique",
+		"description": "Pour faire parler tes meubles :o"
+	},
+	"sound_set_8": {
+		"name": "HabboElectro",
+		"description": "Hypersonique !"
+	},
+	"sound_set_9": {
+		"name": "Voix mystiques",
+		"description": "Toute la gamme!"
+	},
+	"sound_set_10": {
+		"name": "Boys Band Style",
+		"description": "Modern hit sounds"
+	},
+	"sound_set_11": {
+		"name": "Spicey Donna",
+		"description": "D.I.S.C.O grooves"
+	},
+	"sound_set_12": {
+		"name": "Abe Normal",
+		"description": "Weirdness for openminded"
+	},
+	"sound_set_13": {
+		"name": "Cafe Muzzakh",
+		"description": "Summery & light muzak"
+	},
+	"sound_set_14": {
+		"name": "Cameron's Ex",
+		"description": "Just in grooves"
+	},
+	"sound_set_15": {
+		"name": "El Generico",
+		"description": "R'n'B massive"
+	},
+	"sound_set_16": {
+		"name": "Ferry Nultado",
+		"description": "Chic melodies!"
+	},
+	"sound_set_17": {
+		"name": "Jive Sideburns",
+		"description": "Funky disco loops"
+	},
+	"sound_set_18": {
+		"name": "Little Tanga Beach",
+		"description": "Brazilian rhythms"
+	},
+	"sound_set_19": {
+		"name": "MnM",
+		"description": "Fat'n'funky"
+	},
+	"sound_set_20": {
+		"name": "Monkey Paradise",
+		"description": "Sounds of deepest jungle"
+	},
+	"sound_set_21": {
+		"name": "Snotty Day",
+		"description": "Headbanger's riffs"
+	},
+	"sound_set_22": {
+		"name": "A Day In Park",
+		"description": "Nature sound effects"
+	},
+	"sound_set_23": {
+		"name": "Nature Nightlife",
+		"description": "Crickets & owls"
+	},
+	"sound_set_24": {
+		"name": "Compu FX",
+		"description": "Sound Design/SFX"
+	},
+	"sound_set_25": {
+		"name": "Party Pack",
+		"description": "Sons Fiesta"
+	},
+	"sound_set_26": {
+		"name": "Bhangra Mangra",
+		"description": "World/Musique indienne"
+	},
+	"sound_set_27": {
+		"name": "Rasta Santa's Pack",
+		"description": "Reggae"
+	},
+	"sound_set_28": {
+		"name": "Moshy Metal",
+		"description": "Rock/Metal"
+	},
+	"sound_set_29": {
+		"name": "Dancefloor burners",
+		"description": "Electro house"
+	},
+	"sound_set_30": {
+		"name": "Double Peaks",
+		"description": "Romantique"
+	},
+	"sound_set_31": {
+		"name": "Clubber's delight",
+		"description": "House : la french touch"
+	},
+	"sound_set_32": {
+		"name": "Pianissimo",
+		"description": "Classique et romantique"
+	},
+	"sound_set_33": {
+		"name": "Yngvie Van Halen",
+		"description": "Solo de guitare"
+	},
+	"sound_set_34": {
+		"name": "Rockin' riffs",
+		"description": "Pour les guitar heroes"
+	},
+	"sound_set_35": {
+		"name": "Supa Funk",
+		"description": "Groovelicious"
+	},
+	"sound_set_36": {
+		"name": "Bossa Nueva",
+		"description": "Rythmes tropicaux"
+	},
+	"sound_set_37": {
+		"name": "B.O. Habbowood",
+		"description": "Musiques de films"
+	},
+	"sound_set_38": {
+		"name": "Highway to Habbo",
+		"description": "Metal"
+	},
+	"sound_set_39": {
+		"name": "Pixel on the water",
+		"description": "Metal"
+	},
+	"sound_set_40": {
+		"name": "Iron Maid",
+		"description": "Metal"
+	},
+	"sound_set_41": {
+		"name": "Sympathy for the Coder",
+		"description": "Metal"
+	},
+	"sound_set_42": {
+		"name": "Snouthill Horror",
+		"description": "Horror"
+	},
+	"sound_set_43": {
+		"name": "Silence of the flooders",
+		"description": "Horror"
+	},
+	"sound_set_44": {
+		"name": "Ghost story",
+		"description": "Horror"
+	},
+	"sound_set_45": {
+		"name": "Berlin Connection",
+		"description": ""
+	},
+	"sound_set_46": {
+		"name": "Club Sounds III",
+		"description": "Electro"
+	},
+	"sound_set_47": {
+		"name": "Loco Electro",
+		"description": "Electro"
+	},
+	"sound_set_48": {
+		"name": "Jackin' Chicago",
+		"description": "Electro"
+	},
+	"sound_set_49": {
+		"name": "Maximum Minimal",
+		"description": "Ambiance"
+	},
+	"sound_set_50": {
+		"name": "Nu Skool Breakz",
+		"description": "Electro"
+	},
+	"sound_set_51": {
+		"name": "NYC Beat",
+		"description": "Electro"
+	},
+	"sound_set_52": {
+		"name": "State of Trancehouse",
+		"description": ""
+	},
+	"sound_set_53": {
+		"name": "Oh Holly Habbo",
+		"description": ""
+	},
+	"sound_set_54": {
+		"name": "Rudolph's loop",
+		"description": ""
+	},
+	"sound_set_55": {
+		"name": "RnB Grooves 1",
+		"description": "Urban"
+	},
+	"sound_set_56": {
+		"name": "RnB Grooves 2",
+		"description": "Urban"
+	},
+	"sound_set_57": {
+		"name": "RnB Grooves 3",
+		"description": "Urban"
+	},
+	"sound_set_58": {
+		"name": "RnB Grooves 4",
+		"description": "Urban"
+	},
+	"sound_set_59": {
+		"name": "RnB Grooves 5",
+		"description": "Urban"
+	},
+	"sound_set_60": {
+		"name": "Latino 1",
+		"description": "Chaleur !"
+	},
+	"sound_set_61": {
+		"name": "Latino 2",
+		"description": "B.O. Loveboat"
+	},
+	"sound_set_62": {
+		"name": "Skeud Alhambra 1",
+		"description": "Pour la danse du ventre"
+	},
+	"sound_set_63": {
+		"name": "Skeud Alhambra 2",
+		"description": "Number 1 à Marrakech"
+	},
+	"sound_set_64": {
+		"name": "Skeud Alhambra 3",
+		"description": "Pour charmer les serpents"
+	},
+	"sound_set_65": {
+		"name": "Tiki 1",
+		"description": "Le son des Tikitoa"
+	},
+	"sound_set_66": {
+		"name": "Tiki 3",
+		"description": "La parole de Toa-Toa!"
+	},
+	"sound_set_67": {
+		"name": "Tiki 3",
+		"description": "Le rythme des îles"
+	},
+	"sound_set_68": {
+		"name": "Sound set 68",
+		"description": ""
+	},
+	"sound_set_69": {
+		"name": "Sound set 69",
+		"description": ""
+	},
+	"sound_set_70": {
+		"name": "Sound set 70",
+		"description": ""
+	},
+	"sound_set_71": {
+		"name": "Trax Pingouin",
+		"description": ""
+	},
+	"sound_set_72": {
+		"name": "Ambiance picnic",
+		"description": ""
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

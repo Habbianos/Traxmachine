@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Habbo Sounds 1",
+		"description": "¿Te gusta el rock?"
+	},
+	"sound_set_2": {
+		"name": "Habbo Sounds 3",
+		"description": "Las clásicas Habbo Melodías"
+	},
+	"sound_set_3": {
+		"name": "Electronic 1",
+		"description": "¡Los sonidos más alocados!"
+	},
+	"sound_set_4": {
+		"name": "Ambient 1",
+		"description": "Para los momentos de chill-out"
+	},
+	"sound_set_5": {
+		"name": "Ambient 4",
+		"description": "El lado oscuro de Habbo"
+	},
+	"sound_set_6": {
+		"name": "Ambient 3",
+		"description": "El mejor sonido ambiente"
+	},
+	"sound_set_7": {
+		"name": "SFX 5",
+		"description": "¡Viva los efectos especiales!"
+	},
+	"sound_set_8": {
+		"name": "Ambient 2",
+		"description": "Pura potencia"
+	},
+	"sound_set_9": {
+		"name": "Electronic 2",
+		"description": "Sólo para atrevidos"
+	},
+	"sound_set_10": {
+		"name": "Hip Hop Beats 1",
+		"description": "Los Hit más modernos"
+	},
+	"sound_set_11": {
+		"name": "Dance 4",
+		"description": "D.I.S.C.O"
+	},
+	"sound_set_12": {
+		"name": "Habbo Sounds 2",
+		"description": "¡Sólo para mentes abiertas!"
+	},
+	"sound_set_13": {
+		"name": "Dance 5",
+		"description": "Suave"
+	},
+	"sound_set_14": {
+		"name": "Hip Hop Beats 2",
+		"description": "¡En la onda!"
+	},
+	"sound_set_15": {
+		"name": "RnB Grooves 6",
+		"description": "R&B a tope"
+	},
+	"sound_set_16": {
+		"name": "Hip Hop Beats 3",
+		"description": "¡Melodias chic!"
+	},
+	"sound_set_17": {
+		"name": "Groove 3",
+		"description": "¡Lo más funky!"
+	},
+	"sound_set_18": {
+		"name": "Groove 4",
+		"description": "El suave ritmo brasileño"
+	},
+	"sound_set_19": {
+		"name": "Hip Hop Beats 4",
+		"description": "¡Y más funky!"
+	},
+	"sound_set_20": {
+		"name": "SFX 2",
+		"description": "Sonidos de la jungla más profunda"
+	},
+	"sound_set_21": {
+		"name": "Rock 1",
+		"description": "Al ritmo más brutal"
+	},
+	"sound_set_22": {
+		"name": "SFX 3",
+		"description": "La naturaleza en estado puro"
+	},
+	"sound_set_23": {
+		"name": "SFX 4",
+		"description": "¡Una de búhos y grillos!"
+	},
+	"sound_set_24": {
+		"name": "Habbo Sounds 4",
+		"description": "Efectos especiales"
+	},
+	"sound_set_25": {
+		"name": "Dance 1",
+		"description": "Sonidos fiesteros"
+	},
+	"sound_set_26": {
+		"name": "Groove 1",
+		"description": "Un toque hindú"
+	},
+	"sound_set_27": {
+		"name": "Groove 2",
+		"description": "Para los amantes del reggae"
+	},
+	"sound_set_28": {
+		"name": "Rock 2",
+		"description": "¡Demasiado para tus oídos!"
+	},
+	"sound_set_29": {
+		"name": "Dance 2",
+		"description": "El mejor House electrónico"
+	},
+	"sound_set_30": {
+		"name": "Instrumental 1",
+		"description": "Para momentos románticos"
+	},
+	"sound_set_31": {
+		"name": "Dance 3",
+		"description": "House sin parar"
+	},
+	"sound_set_32": {
+		"name": "Instrumental 2",
+		"description": "Tu concierto de piano"
+	},
+	"sound_set_33": {
+		"name": "Rock 3",
+		"description": "Guitarreando"
+	},
+	"sound_set_34": {
+		"name": "Rock 5",
+		"description": "Sigue a tus ídolos a la guitarra"
+	},
+	"sound_set_35": {
+		"name": "Dance 6",
+		"description": "Deliciosamente funk"
+	},
+	"sound_set_36": {
+		"name": "Latin 3",
+		"description": "Para mentes adultas"
+	},
+	"sound_set_37": {
+		"name": "Habbowood",
+		"description": "Una buena BSO"
+	},
+	"sound_set_38": {
+		"name": "Rock 6",
+		"description": "Sonidos con mucho peso"
+	},
+	"sound_set_39": {
+		"name": "Rock 7",
+		"description": "¡A gritar!"
+	},
+	"sound_set_40": {
+		"name": "Rock 4",
+		"description": "De vuelta al rock más puro"
+	},
+	"sound_set_41": {
+		"name": "Rock 8",
+		"description": "Rizando el rizo"
+	},
+	"sound_set_42": {
+		"name": "Snouthill Horror",
+		"description": "Sonido Habboween"
+	},
+	"sound_set_43": {
+		"name": "SFX 1",
+		"description": "¿Miedo? ¡Muajajaja!"
+	},
+	"sound_set_44": {
+		"name": "Ghost Story",
+		"description": "Para Salas oscuras"
+	},
+	"sound_set_45": {
+		"name": "Techno 1",
+		"description": "¡Los sonidos más contundentes!"
+	},
+	"sound_set_46": {
+		"name": "Club 1",
+		"description": "Hablando de House..."
+	},
+	"sound_set_47": {
+		"name": "Club 2",
+		"description": "Sonidos de Estocolmo"
+	},
+	"sound_set_48": {
+		"name": "Club 3",
+		"description": "Sonidos de la vieja escuela"
+	},
+	"sound_set_49": {
+		"name": "Club 4",
+		"description": "Verano de 2007"
+	},
+	"sound_set_50": {
+		"name": "Club 5",
+		"description": "¡Dale caña!"
+	},
+	"sound_set_51": {
+		"name": "Club 6",
+		"description": "¡Dale caña!"
+	},
+	"sound_set_52": {
+		"name": "Club 7",
+		"description": "¡Dale caña!"
+	},
+	"sound_set_53": {
+		"name": "Far West 2",
+		"description": "Ahhh, un viaje musical hasta el Lejano Oriente"
+	},
+	"sound_set_54": {
+		"name": "Sound set 54",
+		"description": ""
+	},
+	"sound_set_55": {
+		"name": "R&B Grooves 1",
+		"description": "¡Estilo Nelly!"
+	},
+	"sound_set_56": {
+		"name": "R&B Grooves 2",
+		"description": "¡Sonidos deliciosos!"
+	},
+	"sound_set_57": {
+		"name": "R&B Grooves 3",
+		"description": "¡Sonidos Black!"
+	},
+	"sound_set_58": {
+		"name": "R&B Grooves 4",
+		"description": "¡Menudo ritmo!"
+	},
+	"sound_set_59": {
+		"name": "Sound set 59",
+		"description": ""
+	},
+	"sound_set_60": {
+		"name": "Latin 1",
+		"description": "Hot and romantic"
+	},
+	"sound_set_61": {
+		"name": "Latin 2",
+		"description": "BSO del Crucero del Amor"
+	},
+	"sound_set_62": {
+		"name": "Alhambra 1",
+		"description": "¡Ecos del Lejano Oriente!"
+	},
+	"sound_set_63": {
+		"name": "Alhambra 2",
+		"description": "¡Ecos del Lejano Oriente!"
+	},
+	"sound_set_64": {
+		"name": "Alhambra 3",
+		"description": "¡Ecos del Lejano Oriente!"
+	},
+	"sound_set_65": {
+		"name": "Tiki Sound 1",
+		"description": "¡Sonido natural!"
+	},
+	"sound_set_66": {
+		"name": "Tiki Sound 2",
+		"description": "¡Sonido natural!"
+	},
+	"sound_set_67": {
+		"name": "Tiki Sound 3",
+		"description": "¡Sonido natural!"
+	},
+	"sound_set_68": {
+		"name": "Sport 1",
+		"description": "¡Emoción en la grada!"
+	},
+	"sound_set_69": {
+		"name": "Sport 2",
+		"description": "¡Emoción en la grada!"
+	},
+	"sound_set_70": {
+		"name": "Sport 3",
+		"description": "¡Emoción en la grada!"
+	},
+	"sound_set_71": {
+		"name": "Ártico",
+		"description": "¡El sonido más refrescante!"
+	},
+	"sound_set_72": {
+		"name": "Campo",
+		"description": ""
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

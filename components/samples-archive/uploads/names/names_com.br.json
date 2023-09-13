@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Duck Funk - DJ Fuse",
+		"description": "Rock"
+	},
+	"sound_set_2": {
+		"name": "Habbo - DJ Fuse",
+		"description": "Melodias Clássicas Habbo"
+	},
+	"sound_set_3": {
+		"name": "BattleBall",
+		"description": "Loucura 8bit"
+	},
+	"sound_set_4": {
+		"name": "Aventuras dos Pôr do Sol",
+		"description": "Relaxando"
+	},
+	"sound_set_5": {
+		"name": "Céu Nublado",
+		"description": "Alma em transe"
+	},
+	"sound_set_6": {
+		"name": "Ambiências",
+		"description": "Som ambiente"
+	},
+	"sound_set_7": {
+		"name": "Som dos Mobis",
+		"description": "Efeitos Mobísticos"
+	},
+	"sound_set_8": {
+		"name": "Electrônico",
+		"description": "Grooves eletrônicos"
+	},
+	"sound_set_9": {
+		"name": "Místico",
+		"description": "Brumas místicas"
+	},
+	"sound_set_10": {
+		"name": "Boy Band",
+		"description": "Super popular."
+	},
+	"sound_set_11": {
+		"name": "Spicey Donna",
+		"description": "Música dance e disco."
+	},
+	"sound_set_12": {
+		"name": "Abe Normal",
+		"description": "Sonso aleatórios."
+	},
+	"sound_set_13": {
+		"name": "Café Muzzakh",
+		"description": "Música de elevador."
+	},
+	"sound_set_14": {
+		"name": "Ex da Cameron",
+		"description": "Batidas loucas."
+	},
+	"sound_set_15": {
+		"name": "El Generico",
+		"description": "R 'n' B para massas"
+	},
+	"sound_set_16": {
+		"name": "Ferry Nultado",
+		"description": "Melodia chique."
+	},
+	"sound_set_17": {
+		"name": "Jive Sideburns",
+		"description": "Jive Sideburns"
+	},
+	"sound_set_18": {
+		"name": "Cartucho Samba",
+		"description": "Batidas de samba."
+	},
+	"sound_set_19": {
+		"name": "MnM",
+		"description": "Batidas com suíngue"
+	},
+	"sound_set_20": {
+		"name": "Monkey Paradise",
+		"description": "Monkey Paradise"
+	},
+	"sound_set_21": {
+		"name": "Snotty Day",
+		"description": "Snotty Day"
+	},
+	"sound_set_22": {
+		"name": "A Day In Park",
+		"description": "A Day In Park"
+	},
+	"sound_set_23": {
+		"name": "Nature Nightlife",
+		"description": "Nature Nightlife"
+	},
+	"sound_set_24": {
+		"name": "Compu",
+		"description": "Efeitos de computador e digitais."
+	},
+	"sound_set_25": {
+		"name": "Party Pack",
+		"description": "Party pack"
+	},
+	"sound_set_26": {
+		"name": "Bhangra Mangra",
+		"description": "Ritmos Indianos."
+	},
+	"sound_set_27": {
+		"name": "Rasta Santa Mix",
+		"description": "Rastaaaaaaaa"
+	},
+	"sound_set_28": {
+		"name": "Metal",
+		"description": "Pesado e sujo"
+	},
+	"sound_set_29": {
+		"name": "Festa no Apê",
+		"description": "Pode aparecer"
+	},
+	"sound_set_30": {
+		"name": "Cartucho Melódico",
+		"description": "Estão tocando a nossa canção..."
+	},
+	"sound_set_31": {
+		"name": "DJ Balada",
+		"description": "Solte suas feras"
+	},
+	"sound_set_32": {
+		"name": "Pianinho",
+		"description": "Para dedilhar"
+	},
+	"sound_set_33": {
+		"name": "Yngvie Van Halen",
+		"description": "Yngvie Van Halen"
+	},
+	"sound_set_34": {
+		"name": "Rockin' riffs",
+		"description": "Rockin' riffs"
+	},
+	"sound_set_35": {
+		"name": "Festa Funk",
+		"description": "Cada um no seu quadrado"
+	},
+	"sound_set_36": {
+		"name": "Bom Balanço",
+		"description": "O som dos Grandes Conjuntos"
+	},
+	"sound_set_37": {
+		"name": "Música de Cinema",
+		"description": "Para ouvir comendo pipoca"
+	},
+	"sound_set_38": {
+		"name": "Highway to Habbo",
+		"description": "Highway to Habbo"
+	},
+	"sound_set_39": {
+		"name": "Iron Maid",
+		"description": "Iron Maid"
+	},
+	"sound_set_40": {
+		"name": "Pixels On The Water",
+		"description": "Pixels On The Water"
+	},
+	"sound_set_41": {
+		"name": "Sympathy for the coder",
+		"description": "Sympathy for the coder"
+	},
+	"sound_set_42": {
+		"name": "Snouthill Horror",
+		"description": "Snouthill Horror"
+	},
+	"sound_set_43": {
+		"name": "Silence of the Moderators",
+		"description": "Silence of the Moderators"
+	},
+	"sound_set_44": {
+		"name": "Ghost Story",
+		"description": "Ghost Story"
+	},
+	"sound_set_45": {
+		"name": "Conexão Berlim",
+		"description": "Seleção musical Santa3000"
+	},
+	"sound_set_46": {
+		"name": "Sound set 46",
+		"description": ""
+	},
+	"sound_set_47": {
+		"name": "Sound set 47",
+		"description": ""
+	},
+	"sound_set_48": {
+		"name": "Sound set 48",
+		"description": ""
+	},
+	"sound_set_49": {
+		"name": "Sound set 49",
+		"description": ""
+	},
+	"sound_set_50": {
+		"name": "Sound set 50",
+		"description": ""
+	},
+	"sound_set_51": {
+		"name": "Sound set 51",
+		"description": ""
+	},
+	"sound_set_52": {
+		"name": "Trancehouse",
+		"description": "Seleção musical do Santa 3000"
+	},
+	"sound_set_53": {
+		"name": "Habbo Sagrado",
+		"description": "Seleção de Natal 2007"
+	},
+	"sound_set_54": {
+		"name": "Loops da Rena",
+		"description": "Seleção musical Natal 2007"
+	},
+	"sound_set_55": {
+		"name": "Sound set 55",
+		"description": ""
+	},
+	"sound_set_56": {
+		"name": "Sound set 56",
+		"description": ""
+	},
+	"sound_set_57": {
+		"name": "Sound set 57",
+		"description": ""
+	},
+	"sound_set_58": {
+		"name": "Sound set 58",
+		"description": ""
+	},
+	"sound_set_59": {
+		"name": "Sound set 59",
+		"description": ""
+	},
+	"sound_set_60": {
+		"name": "Cartucho Amor Latino",
+		"description": "**Estoy enamorado**"
+	},
+	"sound_set_61": {
+		"name": "Cartucho Habborella",
+		"description": "Perfeito para jantares à luz de velas"
+	},
+	"sound_set_62": {
+		"name": "O som do Gênio",
+		"description": "O cara tem bom gosto"
+	},
+	"sound_set_63": {
+		"name": "1001 Noites",
+		"description": "Mexe a cintura"
+	},
+	"sound_set_64": {
+		"name": "Batidas Marroquinas",
+		"description": "Ninguém fica parado"
+	},
+	"sound_set_65": {
+		"name": "Sound set 65",
+		"description": ""
+	},
+	"sound_set_66": {
+		"name": "Sound set 66",
+		"description": ""
+	},
+	"sound_set_67": {
+		"name": "Sound set 67",
+		"description": ""
+	},
+	"sound_set_68": {
+		"name": "Sound set 68",
+		"description": ""
+	},
+	"sound_set_69": {
+		"name": "Sound set 69",
+		"description": ""
+	},
+	"sound_set_70": {
+		"name": "Sound set 70",
+		"description": ""
+	},
+	"sound_set_71": {
+		"name": "Cartucho Natal 2008",
+		"description": "Bate o sino pequenino..."
+	},
+	"sound_set_72": {
+		"name": "Sons da roça",
+		"description": "Para ouvir num momento de paz"
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

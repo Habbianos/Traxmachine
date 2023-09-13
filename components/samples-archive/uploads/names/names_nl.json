@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "DJ Fuse's Duck Funk",
+		"description": "Een echte klassieker"
+	},
+	"sound_set_2": {
+		"name": "DJ Fuse's Habbo Theme",
+		"description": "Maak je eigen Habbosound"
+	},
+	"sound_set_3": {
+		"name": "BattleBall thema's",
+		"description": "Dans en stuiter"
+	},
+	"sound_set_4": {
+		"name": "Zonnige en warm",
+		"description": "Voor mooie momenten"
+	},
+	"sound_set_5": {
+		"name": "Dark Skies",
+		"description": "Donker en duister"
+	},
+	"sound_set_6": {
+		"name": "Ambient soundset",
+		"description": "Relaxte geluidseffecten"
+	},
+	"sound_set_7": {
+		"name": "Meubi Sounds 1",
+		"description": "Zo klinkt je Meubi"
+	},
+	"sound_set_8": {
+		"name": "Electronica",
+		"description": "Mellow electric geluidjes"
+	},
+	"sound_set_9": {
+		"name": "Mysto Magica",
+		"description": "Mysterieuze soundscapes"
+	},
+	"sound_set_10": {
+		"name": "Boyband Sensation",
+		"description": "Heel hitgevoelig!"
+	},
+	"sound_set_11": {
+		"name": "Spicey Donna",
+		"description": "D.I.S.C.O grooves"
+	},
+	"sound_set_12": {
+		"name": "Underground beats",
+		"description": "Vreemdheid"
+	},
+	"sound_set_13": {
+		"name": "Cafe Muzzakh",
+		"description": "Zomers en licht"
+	},
+	"sound_set_14": {
+		"name": "Just in swing",
+		"description": "Ritme in de mix"
+	},
+	"sound_set_15": {
+		"name": "El Generico",
+		"description": "Spicy R 'n B"
+	},
+	"sound_set_16": {
+		"name": "Woooh DJ",
+		"description": "Elegante danstrax"
+	},
+	"sound_set_17": {
+		"name": "Funky Sideburns",
+		"description": "Discoloopjes en breaks"
+	},
+	"sound_set_18": {
+		"name": "Samba Beach",
+		"description": "Habbo de Janeiro"
+	},
+	"sound_set_19": {
+		"name": "Jetset",
+		"description": "Strak & funky"
+	},
+	"sound_set_20": {
+		"name": "Apen Paradise",
+		"description": "Junglegeluiden"
+	},
+	"sound_set_21": {
+		"name": "Baaldag",
+		"description": "Headbanger's riffs"
+	},
+	"sound_set_22": {
+		"name": "Dag in het park",
+		"description": "Natuurlijke geluiden"
+	},
+	"sound_set_23": {
+		"name": "Nature Nightlife",
+		"description": "Krekels & uilen"
+	},
+	"sound_set_24": {
+		"name": "Compu FX",
+		"description": "Bliepjes"
+	},
+	"sound_set_25": {
+		"name": "Partypakket",
+		"description": "Blije feestgeluiden"
+	},
+	"sound_set_26": {
+		"name": "Bhangra Mangra",
+		"description": "Bollywood Soundtrack"
+	},
+	"sound_set_27": {
+		"name": "Dubstyle Rasta",
+		"description": "Pure Reggae riddims"
+	},
+	"sound_set_28": {
+		"name": "Zware metalen",
+		"description": "Geen gejengel!"
+	},
+	"sound_set_29": {
+		"name": "Voor de dansvloer",
+		"description": "Dansbare beats"
+	},
+	"sound_set_30": {
+		"name": "Hoogtepunten",
+		"description": "Habbo's in love"
+	},
+	"sound_set_31": {
+		"name": "Clubber's delight",
+		"description": "House loops"
+	},
+	"sound_set_32": {
+		"name": "Pianissimo",
+		"description": "Pianogeluiden"
+	},
+	"sound_set_33": {
+		"name": "100% gitaar",
+		"description": "Gitaarsolo's"
+	},
+	"sound_set_34": {
+		"name": "Rockin' riffs",
+		"description": "Glamrock leeft"
+	},
+	"sound_set_35": {
+		"name": "Supa Funk",
+		"description": "Groovelicious"
+	},
+	"sound_set_36": {
+		"name": "Bossa Nueva",
+		"description": "Zwoel is cool"
+	},
+	"sound_set_37": {
+		"name": "Habbowood",
+		"description": "Geluid, camera, actie!"
+	},
+	"sound_set_38": {
+		"name": "Highway to Habbo",
+		"description": "Rockende Riffs"
+	},
+	"sound_set_39": {
+		"name": "Mods on the Water",
+		"description": "Rock & Roll!"
+	},
+	"sound_set_40": {
+		"name": "Iron Habbo",
+		"description": "Ouderwets scheuren met die gitaren"
+	},
+	"sound_set_41": {
+		"name": "Sympathy For The Pixel",
+		"description": "Rolling Habbo's"
+	},
+	"sound_set_42": {
+		"name": "Habbo Horror",
+		"description": "Hotel bibbers"
+	},
+	"sound_set_43": {
+		"name": "Eng gekraak",
+		"description": "Bang om te luisteren?"
+	},
+	"sound_set_44": {
+		"name": "Spookgeluiden",
+		"description": "Boe!"
+	},
+	"sound_set_45": {
+		"name": "Berlin Connection",
+		"description": "De Bakermat van de House"
+	},
+	"sound_set_46": {
+		"name": "Club Sounds III",
+		"description": "Dansbaar"
+	},
+	"sound_set_47": {
+		"name": "Loco electro",
+		"description": "Stockholm beats"
+	},
+	"sound_set_48": {
+		"name": "Jackin' Chicago",
+		"description": "Old school vibes"
+	},
+	"sound_set_49": {
+		"name": "Maximum Minimal",
+		"description": "Sound of summer 2007"
+	},
+	"sound_set_50": {
+		"name": "Nu Skool Breakz",
+		"description": "West Coast loopz"
+	},
+	"sound_set_51": {
+		"name": "NYC Beat",
+		"description": "From home of electro"
+	},
+	"sound_set_52": {
+		"name": "State of Trance",
+		"description": "Hypnotische Atmosferen"
+	},
+	"sound_set_53": {
+		"name": "Jingle beats",
+		"description": "Maak je eigen kersthit"
+	},
+	"sound_set_54": {
+		"name": "Swingende kerst",
+		"description": "It?s the season..."
+	},
+	"sound_set_55": {
+		"name": "Pixel Party Vol. 1",
+		"description": "Het dak eraf!"
+	},
+	"sound_set_56": {
+		"name": "Pixel Party Vol. 2",
+		"description": "Het dak eraf!"
+	},
+	"sound_set_57": {
+		"name": "Pixel Party Vol. 3",
+		"description": "Het dak eraf!"
+	},
+	"sound_set_58": {
+		"name": "Pixel Party Vol. 4",
+		"description": "Het dak eraf!"
+	},
+	"sound_set_59": {
+		"name": "Pixel Party Vol. 5",
+		"description": "Het dak eraf!"
+	},
+	"sound_set_60": {
+		"name": "Habbo Latino Vol. 1",
+		"description": "Instant zomerhits"
+	},
+	"sound_set_61": {
+		"name": "Habbo Latino Vol. 2",
+		"description": "Instant zomerhits"
+	},
+	"sound_set_62": {
+		"name": "Sultan Sounds",
+		"description": "Alhambra volume 1"
+	},
+	"sound_set_63": {
+		"name": "Desert Beats",
+		"description": "Alhambra volume 2"
+	},
+	"sound_set_64": {
+		"name": "Camel Club",
+		"description": "Alhambra volume 3"
+	},
+	"sound_set_65": {
+		"name": "Tiki Sounds Vol.1",
+		"description": "Het ritme van de jungle"
+	},
+	"sound_set_66": {
+		"name": "Tiki Sounds Vol.2",
+		"description": "Het ritme van de jungle"
+	},
+	"sound_set_67": {
+		"name": "Tiki Sounds Vol.3",
+		"description": "Het ritme van de jungle"
+	},
+	"sound_set_68": {
+		"name": "Supporters Sounds",
+		"description": "De twaalfde man"
+	},
+	"sound_set_69": {
+		"name": "Aanvalluh!",
+		"description": "Schreeuwen helpt!"
+	},
+	"sound_set_70": {
+		"name": "Habbo Volkslied",
+		"description": "Om mee te beginnen"
+	},
+	"sound_set_71": {
+		"name": "Arctic Trax",
+		"description": "De hit van 2008"
+	},
+	"sound_set_72": {
+		"name": "Agro Country Hits",
+		"description": "Door Mannenkoor Habbospoor"
+	},
+	"sound_set_73": {
+		"name": "Sound set 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Sound set 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Sound set 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Sound set 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}

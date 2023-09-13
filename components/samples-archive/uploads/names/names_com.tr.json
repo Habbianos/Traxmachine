@@ -1,0 +1,318 @@
+{
+	"sound_set_1": {
+		"name": "Habbo Sesleri 1",
+		"description": "Hadi partini başlat!"
+	},
+	"sound_set_2": {
+		"name": "Habbo Sesleri 3",
+		"description": "Hadi partini yine başlat!"
+	},
+	"sound_set_3": {
+		"name": "Elektronik 1",
+		"description": "Saksafonunu parçala"
+	},
+	"sound_set_4": {
+		"name": "Ortam 1",
+		"description": "Arkana yaslan ve rahatla"
+	},
+	"sound_set_5": {
+		"name": "Ortam 4",
+		"description": "Börtü böcek ses efektleri"
+	},
+	"sound_set_6": {
+		"name": "Ortam 3",
+		"description": "Odanın içinde doğa sesleri."
+	},
+	"sound_set_7": {
+		"name": "Ses Efektleri 5",
+		"description": "Mobilerin canlanıyor"
+	},
+	"sound_set_8": {
+		"name": "Ortam 2",
+		"description": "Hadi partini başlat"
+	},
+	"sound_set_9": {
+		"name": "Elektronik 2",
+		"description": "Büyüleyici lezzet"
+	},
+	"sound_set_10": {
+		"name": "Hip Hop Şarkıları 1",
+		"description": "Şarkı mırıldanan tatlı çocuklar"
+	},
+	"sound_set_11": {
+		"name": "Dans 4",
+		"description": "Çok çekici"
+	},
+	"sound_set_12": {
+		"name": "Habbo Sesleri 2",
+		"description": "Şuna bir bak"
+	},
+	"sound_set_13": {
+		"name": "Dans 5",
+		"description": "Şuna bir bak"
+	},
+	"sound_set_14": {
+		"name": "Hip Hop Şarkıları 2",
+		"description": "Şuna bir bak"
+	},
+	"sound_set_15": {
+		"name": "RnB Şarkıları 6",
+		"description": "Şuna bir bak"
+	},
+	"sound_set_16": {
+		"name": "Hip Hop Şarkıları 3",
+		"description": "Şuna bir bak"
+	},
+	"sound_set_17": {
+		"name": "Uzun Favorili Jive",
+		"description": ""
+	},
+	"sound_set_18": {
+		"name": "Küçük Tanga Sahili",
+		"description": ""
+	},
+	"sound_set_19": {
+		"name": "MnM",
+		"description": ""
+	},
+	"sound_set_20": {
+		"name": "Maymun Cenneti",
+		"description": ""
+	},
+	"sound_set_21": {
+		"name": "Zor Gün",
+		"description": ""
+	},
+	"sound_set_22": {
+		"name": "Parkta Bir Gün",
+		"description": ""
+	},
+	"sound_set_23": {
+		"name": "Doğanın Gece Hayatı",
+		"description": ""
+	},
+	"sound_set_24": {
+		"name": "Bilgisayar Efektleri",
+		"description": ""
+	},
+	"sound_set_25": {
+		"name": "Parti Paketi",
+		"description": ""
+	},
+	"sound_set_26": {
+		"name": "Bhangra Mangra",
+		"description": ""
+	},
+	"sound_set_27": {
+		"name": "Rasta.Claus'un Ekibi",
+		"description": ""
+	},
+	"sound_set_28": {
+		"name": "Moshy Metal",
+		"description": ""
+	},
+	"sound_set_29": {
+		"name": "Dans 2",
+		"description": ""
+	},
+	"sound_set_30": {
+		"name": "Enstrümental 1",
+		"description": ""
+	},
+	"sound_set_31": {
+		"name": "Dans 3",
+		"description": ""
+	},
+	"sound_set_32": {
+		"name": "Enstrümental 2",
+		"description": ""
+	},
+	"sound_set_33": {
+		"name": "Rock 3",
+		"description": ""
+	},
+	"sound_set_34": {
+		"name": "Rock 5",
+		"description": ""
+	},
+	"sound_set_35": {
+		"name": "Dans 6",
+		"description": ""
+	},
+	"sound_set_36": {
+		"name": "Bossa Nueva",
+		"description": ""
+	},
+	"sound_set_37": {
+		"name": "Ses seti 37",
+		"description": ""
+	},
+	"sound_set_38": {
+		"name": "Rock 6",
+		"description": "Ağır riffler!"
+	},
+	"sound_set_39": {
+		"name": "Rock 7",
+		"description": "Çığlık at!"
+	},
+	"sound_set_40": {
+		"name": "Rock 4",
+		"description": "Bir glam rock esintisi."
+	},
+	"sound_set_41": {
+		"name": "Rock 8",
+		"description": "Rolling Loops'tan..."
+	},
+	"sound_set_42": {
+		"name": "Ses seti 42",
+		"description": ""
+	},
+	"sound_set_43": {
+		"name": "Ses Efektleri 1",
+		"description": ""
+	},
+	"sound_set_44": {
+		"name": "Ses seti 44",
+		"description": ""
+	},
+	"sound_set_45": {
+		"name": "Berlin Connection",
+		"description": ""
+	},
+	"sound_set_46": {
+		"name": "Kulüp 1",
+		"description": ""
+	},
+	"sound_set_47": {
+		"name": "Kulüp 2",
+		"description": ""
+	},
+	"sound_set_48": {
+		"name": "Kulüp 3",
+		"description": ""
+	},
+	"sound_set_49": {
+		"name": "Kulüp 4",
+		"description": ""
+	},
+	"sound_set_50": {
+		"name": "Kulüp 5",
+		"description": ""
+	},
+	"sound_set_51": {
+		"name": "Kulüp 6",
+		"description": ""
+	},
+	"sound_set_52": {
+		"name": "Kulüp 7",
+		"description": ""
+	},
+	"sound_set_53": {
+		"name": "Ooo Kutsal Habbo",
+		"description": ""
+	},
+	"sound_set_54": {
+		"name": "Rudolph'un Döngüleri",
+		"description": ""
+	},
+	"sound_set_55": {
+		"name": "RnB Şarkıları 1",
+		"description": "Gece boyunca dans et..."
+	},
+	"sound_set_56": {
+		"name": "RnB Şarkıları 2",
+		"description": "Dans Dans Dans"
+	},
+	"sound_set_57": {
+		"name": "RnB Şarkıları 3",
+		"description": "Salla! Dans et!"
+	},
+	"sound_set_58": {
+		"name": "RnB Şarkıları 4",
+		"description": "Yeni Parçalar"
+	},
+	"sound_set_59": {
+		"name": "RnB Şarkıları 5",
+		"description": "Yeni Dans Parçaları"
+	},
+	"sound_set_60": {
+		"name": "Latin 1",
+		"description": "Seksi ve romantik"
+	},
+	"sound_set_61": {
+		"name": "Latin 2",
+		"description": "Aşk Teknesi Film Müziği"
+	},
+	"sound_set_62": {
+		"name": "Alhambra Şarkıları 1",
+		"description": ""
+	},
+	"sound_set_63": {
+		"name": "Alhambra Şarkıları 2",
+		"description": ""
+	},
+	"sound_set_64": {
+		"name": "Alhambra Şarkıları 3",
+		"description": ""
+	},
+	"sound_set_65": {
+		"name": "Tiki Şarkı Paketi 1",
+		"description": ""
+	},
+	"sound_set_66": {
+		"name": "Tiki Şarkı Paketi 2",
+		"description": ""
+	},
+	"sound_set_67": {
+		"name": "Tiki Şarkı Paketi 3",
+		"description": ""
+	},
+	"sound_set_68": {
+		"name": "Madball Şarkıları 1",
+		"description": ""
+	},
+	"sound_set_69": {
+		"name": "Madball Şarkıları 2",
+		"description": ""
+	},
+	"sound_set_70": {
+		"name": "Madball Şarkıları 3",
+		"description": ""
+	},
+	"sound_set_71": {
+		"name": "Ses seti 71",
+		"description": ""
+	},
+	"sound_set_72": {
+		"name": "Halk Müziği Şarkı Paketi",
+		"description": "Halk müziği şarkıları."
+	},
+	"sound_set_73": {
+		"name": "Ses seti 73",
+		"description": ""
+	},
+	"sound_set_74": {
+		"name": "Ses seti 74",
+		"description": ""
+	},
+	"sound_set_75": {
+		"name": "Ses seti 75",
+		"description": ""
+	},
+	"sound_set_76": {
+		"name": "Ses seti 76",
+		"description": ""
+	},
+	"sound_set_77": {
+		"name": "Sound set 77",
+		"description": ""
+	},
+	"sound_set_78": {
+		"name": "Sound set 78",
+		"description": ""
+	},
+	"sound_set_79": {
+		"name": "Sound set 79",
+		"description": ""
+	}
+}
