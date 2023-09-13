@@ -1,3 +1,5 @@
+<div align="center"><img src="./docs/img/cd.png" width="64" /></div>
+
 # Musics Archive
 
 Information about the songs that were created in Trax

@@ -1,3 +1,5 @@
+<div align="center"><img src="./docs/img/pack.png" width="64" /></div>
+
 # Samples Archive
 
 All the 648 samples (+1 for the silence one), 9 for each of 72 sound sets.
