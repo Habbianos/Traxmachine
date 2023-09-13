@@ -22,28 +22,33 @@ Here, we have how the data was saved:
 
 The music code has three parts:
 
-- **Layer id:** layer sequencial identifier, from 1 to 4. There is no effect switching the layer order;
+- **Layer id:** layer sequencial identifier, from 1 to 4 by default. There is no effect switching the layer order;
 - **Sample id:** sample sequencial identifier, is not separated by the sound sets, so it's up to 648. The id `0` is used to define the empty spaces;
 - **Duration:** number of spaces filled, each space represent 2 seconds. It's a multiple of the corresponding mp3 file length divided by 2 (subsequente blocks of the same sample are added together). Another way do describe is "the sample will keep playing by `duration * 2` seconds".
 
+> The pack ids that contain the samples used in the music aren't explicit specified in the music code. So, formally there isn't a limit on how many packs could be used, just in the interface that showing them might becomes a issue.
+
 ### Formal syntax
 
-```
-<layer>{4}
+```ebnf
+<layerList> ::= <layer>+
+<layer> ::= <layerId> ":" <sampleList> ":"
+<layerId> ::= [1-4]
+<sampleList> ::= <sample> (";" <sample>)*
+<sample> ::= <sampleId> "," <duration>
+<sampleId> ::= <posIntUpTo648>
+<duration> ::= <positiveInteger>
 
-where
-<layer> = <layer-id>:<sample>*:
-<layer-id> = 1 | 2 | 3 | 4
-<sample> = <sample-id>,<duration><separator>?
-<sample-id> == 0 <= x <= 648
-<duration> == x > 1
-<separator> = ;
+<positiveInteger> ::= "0" | ([1-9] [0-9]*)
+<posIntUpTo648> ::= ("64" [0-8]) | ("6" [0-3] [0-9]) | ([1-5] [0-9] [0-9]) | ([1-9] [0-9]) | [0-9]
 ```
 
-### RegExp
+> Note that by default the `<layerId>` is sequencial starting with 1 up to 4, but the number itself doesn't affect the music as having empty layers (not being sequencial) or switching the layer order (not starting with 1) doesn't change the resulting music. Having more than 4 layers and samples ids over 648 could also be possible as explained [below](#extended-version), but it's not very user-friendly allowing much more layers and those extra samples aren't grouped very well as the original packs.
+
+### RegExp (simplified)
 
 ```regexp
-/^(?:([1234]):(?:(\d+),(\d+);?)*:){4}$/
+/^(?:(\d+):(?:(\d+),(\d+))(;(?:(\d+),(\d+)))*:)+$/
 ```
 
 ### Examples
