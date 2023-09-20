@@ -5,32 +5,68 @@
  */
 class HabboMusicEvents {
 	/** @source §_-6jh§.§_-5vR§.§_-01s§ */
-	static ROSM_SOUND_MACHINE_INIT = 1;
+	static get ROSM_SOUND_MACHINE_INIT() {
+		return 1;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-4ED§ */
-	static ROSM_SOUND_MACHINE_SWITCHED_ON = 2;
+	static get ROSM_SOUND_MACHINE_SWITCHED_ON() {
+		return 2;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-6JK§ */
-	static ROSM_SOUND_MACHINE_SWITCHED_OFF = 3;
+	static get ROSM_SOUND_MACHINE_SWITCHED_OFF() {
+		return 3;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-0I5§ */
-	static ROSM_SOUND_MACHINE_DISPOSE = 4;
+	static get ROSM_SOUND_MACHINE_DISPOSE() {
+		return 4;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-0Go§ */
-	static ROSM_JUKEBOX_INIT = 5;
+	static get ROSM_JUKEBOX_INIT() {
+		return 5;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-2z§ */
-	static ROSM_JUKEBOX_SWITCHED_ON = 6;
+	static get ROSM_JUKEBOX_SWITCHED_ON() {
+		return 6;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-0de§ */
-	static ROSM_JUKEBOX_SWITCHED_OFF = 7;
+	static get ROSM_JUKEBOX_SWITCHED_OFF() {
+		return 7;
+	}
+
 	/** @source §_-6jh§.§_-5vR§.§_-4n1§ */
-	static ROSM_JUKEBOX_DISPOSE = 8;
+	static get ROSM_JUKEBOX_DISPOSE() {
+		return 8;
+	}
+
 
 	/** @source §_-3bw§.§_-3wA§.§_-3oJ§ */
-	static SCE_TRAX_SONG_COMPLETE = 9;
+	static get SCE_TRAX_SONG_COMPLETE() {
+		return 9;
+	}
+
 
 	/** @source §_-3bw§.§_-1R-§.§_-4AE§ */
-	static SIR_TRAX_SONG_INFO_RECEIVED = 10;
+	static get SIR_TRAX_SONG_INFO_RECEIVED() {
+		return 10;
+	}
+
 
 	/** @source §_-3bw§.§_-5RD§.§_-6S0§ */
-	static PLUE_PLAY_LIST_UPDATED = 11;
+	static get PLUE_PLAY_LIST_UPDATED() {
+		return 11;
+	}
+
 	/** @source §_-3bw§.§_-5RD§.§_-3lb§ */
-	static PLUE_PLAY_LIST_FULL = 12;
+	static get PLUE_PLAY_LIST_FULL() {
+		return 12;
+	}
 }
+
 
 export { HabboMusicEvents }
