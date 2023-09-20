@@ -1,3 +1,8 @@
+//
+// THIS FILE IS JUST A POLYFILL OF SOME `Map` METHODS THAT AREN'T AVAILABLE IN
+// THE JAVASCRIPT VERSION.
+//
+
 /**
  * Get the key from the Map at the specified index.
  *

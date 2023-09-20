@@ -1,7 +1,7 @@
 import { HabboMusicEvents } from './HabboMusicEvents.mjs';
 import { HabboSoundManagerFlash10 } from './HabboSoundManagerFlash10.mjs';
 import { SongObject } from './SongObject.mjs';
-import { SoundObject } from './SoundObject.mjs';
+import { SoundObject } from './interface/SoundObject.mjs';
 import { TraxSongData } from './TraxSongData.mjs';
 import { TraxSongEvent } from './TraxSongEvent.mjs';
 

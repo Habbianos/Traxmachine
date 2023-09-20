@@ -33,7 +33,7 @@ While this project is primarily focused on reverse engineering and conversion, w
 - `LoopInfo` - **Done**
 - `SongBase` - **Unfinished**
 - `SongObject` - **Unfinished**
-- `SoundMachinePlayListController` - **Not Started**
+- `SoundMachinePlayListController` - **Unfinished**
 - `TraxChannel` - **Done**
 - `TraxData` - **Done**
 - `TraxNote` - **Done**
@@ -42,6 +42,10 @@ While this project is primarily focused on reverse engineering and conversion, w
 - `TraxSequencer` - **Done**
 - `TraxSongData` - **Done**
 - `TraxSongEvent` - **Not Started**
+
+### Others less important
+
+- `PlayListEditorItemListView`
 
 
 ## Inspiration

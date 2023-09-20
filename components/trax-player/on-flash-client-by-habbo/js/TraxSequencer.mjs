@@ -1,8 +1,9 @@
 import { LoopInfo } from './LoopInfo.mjs';
-import { SoundObject } from './SoundObject.mjs';
+import { SoundObject } from './interface/SoundObject.mjs';
 import { TraxData } from './TraxData.mjs';
 import { TraxSample } from './TraxSample.mjs';
 import { getKeyByIndex, getValueByIndex } from './utils/getByIndex.mjs';
+import { HabboMusicEvents } from './HabboMusicEvents.mjs';
 
 /**
  * Classe que representa um sequenciador de trilha sonora no jogo.
@@ -875,7 +876,12 @@ class TraxSequencer extends SoundObject {
 	 */
 	#stopPlayback() {
 		this.#finalizePlayback();
-		this.#eventDispatcher.dispatchEvent(new Event('stop'));
+		this.#eventDispatcher.dispatchEvent(
+			new HabboMusicEvents(
+				HabboMusicEvents.SCE_TRAX_SONG_COMPLETE,
+				this.#soundId
+			)
+		);
 	}
 
 	/**

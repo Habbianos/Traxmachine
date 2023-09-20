@@ -1,5 +1,5 @@
 import { SongBase } from './SongBase.mjs';
-import { SoundObject } from './SoundObject.mjs';
+import { SoundObject } from './interface/SoundObject.mjs';
 
 /**
  * Represents a playable music object.

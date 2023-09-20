@@ -1,5 +1,5 @@
 /**
- * Currently its missing the `#unknown_0hv`/`unknown_UE` property meaning
+ * Currently maybe the property `title` should be changed to `name`
  * @source §_-3y2§.§_-1dq§
  */
 class SongBase {
@@ -26,6 +26,7 @@ class SongBase {
 	}
 
 	/**
+	 * This probably should be changed to `name`
 	 * @source SongBase.§_-3Xo§
 	 * @type {string}
 	 */
@@ -48,22 +49,20 @@ class SongBase {
 	}
 
 	/**
-	 * ? - Maybe the volume
+	 * The synchronization position in seconds for the song.
 	 * @source SongBase.§_-0hv§
-	 * @type {number}
 	 */
-	#unknown_0hv = 0.0;
+	#syncPosition = 0.0;
 
 	/**
 	 * @source SongBase.§_-UE§
 	 */
-	get unknown_UE() {
-		return this.#unknown_0hv;
+	get syncPosition() {
+		return this.#syncPosition;
 	}
 
-	/** Sets the music's volume. */
-	set unknown_UE(value) {
-		this.#unknown_0hv = value;
+	set syncPosition(value) {
+		this.#syncPosition = value;
 	}
 
 	/**

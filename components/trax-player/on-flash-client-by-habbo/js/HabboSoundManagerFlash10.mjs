@@ -1,4 +1,4 @@
-import { SoundObject } from './SoundObject.mjs';
+import { SoundObject } from './interface/SoundObject.mjs';
 import { TraxData } from './TraxData.mjs';
 import { TraxSequencer } from './TraxSequencer.mjs';
 
