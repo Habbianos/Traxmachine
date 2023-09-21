@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <script src="src/utils/map.js"></script>
+    <script src="src/utils/tintImage.js"></script>
+    <script src="src/otavs.js"></script>
+    <script src="src/imagens.js"></script>
+  </head>
+
+  <body>
+    <audio controls crossorigin="anonymous" loop autoplay muted>
+      <source type="audio/mp3" />
+    </audio>
+    <br />
+    Barras:
+    <input type="radio" name="bars" label="Sem cor" value="no-color" />
+    <input type="radio" name="bars" label="Por nível" value="levels" checked />
+    <input type="radio" name="bars" label="Arco-íris" value="rainbow" />
+    <br />
+    Piso:
+    <input
+      type="radio"
+      name="ani"
+      label="Ondas Constante"
+      value="wave"
+      checked
+    />
+    <input type="radio" name="ani" label="Ondas no Grid" value="wave-grid" />
+    <input
+      type="radio"
+      name="ani"
+      label="Ondas Elásticas"
+      value="wave-elastic"
+    />
+    <input type="radio" name="ani" label="Ciclone" value="curve-cyclone" />
+    <input type="radio" name="ani" label="Espiral" value="curve-espiral" />
+    <input
+      type="radio"
+      name="ani"
+      label="Pizza giratória"
+      value="curve-pizza"
+    />
+    <br />
+    Taxa de atualização:
+    <input type="number" step=".001" value="0.05" />
+
+    <canvas></canvas>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
