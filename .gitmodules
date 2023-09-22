@@ -1,0 +1,3 @@
+[submodule "apps/traxmachine-com/repo"]
+	path = apps/traxmachine-com/repo
+	url = https://github.com/Habbianos/traxmachine.com
