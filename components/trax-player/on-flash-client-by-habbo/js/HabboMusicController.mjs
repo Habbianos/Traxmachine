@@ -1,6 +1,6 @@
 import { HabboMusicEvents } from './HabboMusicEvents.mjs';
 import { HabboSoundManagerFlash10 } from './HabboSoundManagerFlash10.mjs';
-import { SongObject } from './SongObject.mjs';
+import { SongDataEntry } from './SongDataEntry.mjs';
 import { SoundObject } from './interface/SoundObject.mjs';
 import { TraxSongData } from './TraxSongData.mjs';
 import { TraxSongEvent } from './TraxSongEvent.mjs';
@@ -12,7 +12,7 @@ import { TraxSongEvent } from './TraxSongEvent.mjs';
  * @source §_-Lr§/HabboMusicController.as
  */
 class HabboMusicController {
-	/** @type {Map<number, SongObject>} songId/songObject */
+	/** @type {Map<number, SongDataEntry>} songId/SongDataEntry */
 	songMap = new Map();
 	/** @type {Map<number, boolean>} songId/boolean */
 	playListMap = new Map();
@@ -27,36 +27,36 @@ class HabboMusicController {
 
 	/**
 	 * @param {HabboSoundManagerFlash10} soundManager - The Habbo sound manager.
-	 * @param {IEventDispatcher} eventDispatcher1 - The event dispatcher 1.
-	 * @param {IEventDispatcher} eventDispatcher2 - The event dispatcher 2.
+	 * @param {IEventDispatcher} events - The event dispatcher 1.
+	 * @param {IEventDispatcher} roomEvents - The event dispatcher 2.
 	 */
-	constructor(soundManager, eventDispatcher1, eventDispatcher2) {
+	constructor(soundManager, events, roomEvents) {
 		this.soundManager = soundManager;
-		this.eventDispatcher1 = eventDispatcher1;
-		this.eventDispatcher2 = eventDispatcher2;
+		this.events = events;
+		this.roomEvents = roomEvents;
 
-		this.eventDispatcher2.addEventListener(
+		this.roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_JUKEBOX_INIT,
 			this.onJukeboxInit
 		);
-		this.eventDispatcher2.addEventListener(
+		this.roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_JUKEBOX_DISPOSE,
 			this.onJukeboxDispose
 		);
-		this.eventDispatcher2.addEventListener(
+		this.roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_SOUND_MACHINE_INIT,
 			this.onSoundMachineInit
 		);
-		this.eventDispatcher2.addEventListener(
+		this.roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_SOUND_MACHINE_DISPOSE,
 			this.onSoundMachineDispose
 		);
 
-		setTimeout(this.onSongChangeTimer, 1000);
+		setTimeout(this.sendNextSongRequestMessage, 1000);
 
-		this.eventDispatcher1.addEventListener(
+		this.events.addEventListener(
 			HabboMusicEvents.SCE_TRAX_SONG_COMPLETE,
-			this.onTraxSongComplete
+			this.onSongFinishedPlayingEvent
 		);
 
 		for (let i = 0; i < PlaylistItem.MAX_SONGS; i++) {
@@ -70,26 +70,26 @@ class HabboMusicController {
 	 * @source HabboMusicController.§_-3Fb§
 	 * @param {TraxSongEvent} traxSongEvent - The received music information.
 	 */
-	handleSongInfoReceived(traxSongEvent) {
+	onSongInfoMessage(traxSongEvent) {
 		/** @type {TraxSongData[]} */
 		const songDataArray = traxSongEvent.getSongDataArray();
 
 		for (let i = 0; i < songDataArray.length; i++) {
 			const songData = songDataArray[i];
-			const isSongNew = !this.songMap.has(songData.id);
-			const isSongPlaying = this.isSongPlaying(songData.id);
+			const isSongNew = this.getSongDataEntry(songData.id) == null;
+			const isSongPlaying = this.areSamplesRequested(songData.id);
 
 			if (isSongNew) {
 				/** @type {SoundObject} */
 				let soundObject = null;
 				if (isSongPlaying) {
-					soundObject = this.soundManager.getOrCreateSoundObject(
+					soundObject = this.soundManager.loadTraxSong(
 						songData.id,
 						songData.data
 					);
 				}
 
-				const newSong = new SongObject(
+				const newSong = new SongDataEntry(
 					songData.id,
 					songData.length,
 					songData.title,
@@ -100,25 +100,25 @@ class HabboMusicController {
 				newSong.data = songData.data;
 				this.songMap.set(songData.id, newSong);
 
-				const songCount = this.getSongCount();
-				const firstUnplayedSongId = this.getFirstUnplayedSongId();
+				const priority = this.getTopRequestPriority();
+				const songId = this.getSongIdRequestedAtPriority(priority);
 
 				if (
 					soundObject !== null &&
 					soundObject.ready &&
-					songData.id === firstUnplayedSongId
+					songData.id === songId
 				) {
-					this.playSong(songCount, firstUnplayedSongId);
+					this.playSongObject(priority, songId);
 				}
 
 				this.dispatchEvent(
-					new CustomEvent('songReceived', { detail: songData.id })
+					new SongInfoReceivedEvent('SIR_TRAX_SONG_INFO_RECEIVED', songData.id)
 				);
 
 				while (this.playingSongs.indexOf(songData.id) !== -1) {
 					this.playingSongs.splice(this.playingSongs.indexOf(songData.id), 1);
 					if (this.playingSongs.length === 0) {
-						this.dispatchEvent(new CustomEvent('allSongsReceived'));
+						this.dispatchEvent(new SongDiskInventoryReceivedEvent('SDIR_SONG_DISK_INVENTORY_RECEIVENT_EVENT'));
 					}
 				}
 

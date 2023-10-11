@@ -1,14 +1,14 @@
 import { HabboMusicController } from './HabboMusicController.mjs';
 import { HabboMusicEvents } from './HabboMusicEvents.mjs';
 import { HabboSoundManagerFlash10 } from './HabboSoundManagerFlash10.mjs';
-import { SongObject } from './SongObject.mjs';
+import { SongDataEntry } from './SongDataEntry.mjs';
 import { Connection } from './interface/Connection.mjs';
 import { HPlayListEvent, HPlayListSongAddedEvent } from './message/events.mjs';
-import { Priority } from './utils/Priority.mjs';
+import { HabboMusicPrioritiesEnum } from './utils/HabboMusicPrioritiesEnum.mjs';
 
 /**
  * Currently its missing the meaning of the EventListeners and the meaning of
- * the getter/setter `unknown_6Q8`
+ * the getter/setter `playPosition`
  * @source §_-Lr§.SoundMachinePlayListController
  */
 class SoundMachinePlayListController {
@@ -23,7 +23,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.priority
 	 */
 	get priority() {
-		return Priority.LOW;
+		return HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST;
 	}
 
 	/**
@@ -48,7 +48,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-5K-§
 	 * @type {EventListener}
 	 */
-	#unknown_5K;
+	#roomEvents;
 
 	/**
 	 * @source SoundMachinePlayListController.§_-3eQ§
@@ -64,7 +64,7 @@ class SoundMachinePlayListController {
 
 	/**
 	 * @source SoundMachinePlayListController.§_-0Gs§
-	 * @type {SongObject[]}
+	 * @type {SongDataEntry[]}
 	 */
 	#playlist;
 
@@ -97,13 +97,13 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-2WO§
 	 * @type {any[]}
 	 */
-	#unknown_2WO;
+	#messageEvents;
 
 	/**
 	 * @source SoundMachinePlayListController.§_-6Q8§
 	 * @type {number}
 	 */
-	get unknown_6Q8() {
+	get playPosition() {
 		return -1;
 	}
 
@@ -111,7 +111,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-6Q8§
 	 * @param {number} k
 	 */
-	set unknown_6Q8(k) {}
+	set playPosition(k) {}
 
 	/**
 	 * @param {HabboSoundManagerFlash10} soundManager - The Habbo Sound Manager.
@@ -131,83 +131,83 @@ class SoundMachinePlayListController {
 		super();
 		this.#soundManager = soundManager;
 		this.#unknown_X8 = eventDispatcher1;
-		this.#unknown_5K = eventDispatcher2;
+		this.#roomEvents = eventDispatcher2;
 		this.#connection = connection;
 		this.#musicController = musicController;
-		this.#unknown_2WO = [];
-		this.#unknown_2WO.push(new HPlayListEvent(this.#handlePlaylistEvent));
-		this.#unknown_2WO.push(
-			new HPlayListSongAddedEvent(this.#handlePlaylistAddedSong)
+		this.#messageEvents = [];
+		this.#messageEvents.push(new HPlayListEvent(this.#onPlayListMessage));
+		this.#messageEvents.push(
+			new HPlayListSongAddedEvent(this.#onPlayListSongAddedMessage)
 		);
 
-		for (const listener of this.#unknown_2WO) {
+		for (const listener of this.#messageEvents) {
 			this.#connection.addMessageEvent(listener);
 		}
 
 		this.#unknown_X8.addEventListener(
 			HabboMusicEvents.SCE_TRAX_SONG_COMPLETE,
-			this.#handleSongComplete
+			this.#onSongFinishedPlayingEvent
 		);
 		this.#unknown_X8.addEventListener(
 			HabboMusicEvents.SIR_TRAX_SONG_INFO_RECEIVED,
-			this.#handleSongInfo
+			this.#onSongInfoReceivedEvent
 		);
-		this.#unknown_5K.addEventListener(
+		this.#roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_SOUND_MACHINE_SWITCHED_ON,
-			this.#handleTurnOn
+			this.#onSoundMachinePlayEvent
 		);
-		this.#unknown_5K.addEventListener(
+		this.#roomEvents.addEventListener(
 			HabboMusicEvents.ROSM_SOUND_MACHINE_SWITCHED_OFF,
-			this.#handleTurnOff
+			this.#onSoundMachineStopEvent
 		);
 	}
 
 	/**
 	 * @source SoundMachinePlayListController.§_-2BW§
 	 * @param {Event} k */
-	#handleTurnOn(k) {
-		this.startPlaylist();
+	#onSoundMachinePlayEvent(k) {
+		this.startPlaying();
 	}
 
 	/**
 	 * @source SoundMachinePlayListController.§_-2sc§
 	 * @param {Event} k
 	 */
-	#handleTurnOff(k) {
-		this.stopPlaylist();
+	#onSoundMachineStopEvent(k) {
+		this.stopPlaying();
 	}
 
 	/**
 	 * Start the playlist if it's not already playing.
 	 * @source SoundMachinePlayListController.§_-6Er§
 	 */
-	startPlaylist() {
+	startPlaying() {
 		if (this.#isPlaying) {
 			return;
 		}
 
 		if (this.#playlist === null || this.#playlist.length === 0) {
-			this.getPlayList();
+			this.requestPlayList();
 			this.#isPlaying = true;
 			return;
 		}
 
-		this.stopPlaylist();
+		this.stopPlaying();
 		this.#currentSongId = -1;
 		this.#isPlaying = true;
-		this.#getNextSongAndPlay();
+		this.#playNextSong();
 	}
 
 	/**
 	 * @source SoundMachinePlayListController.§_-1rf§
 	 * @param {number} songId
 	 */
-	restartAndPlayNext(songId) {
+	checkSongPlayState(songId) {
 		if (this.#currentSongId === songId) {
-			this.#playSong(this.#currentSongId);
-			const _loc2_ = this.#getSongToPlay();
+			this.#playCurrentSongAndNotify(this.#currentSongId);
+			const _loc2_ = this.#getNextEntry();
 			if (_loc2_ != null) {
-				this.#musicController.unknown_48g(_loc2_.id);
+				this.#musicController.addSongInfoRequest(_loc2_.id);
 			}
 		}
 	}
@@ -216,10 +216,10 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-26I§
 	 * @returns {void}
 	 */
-	stopPlaylist() {
+	stopPlaying() {
 		this.#currentSongId = -1;
 		this.#isPlaying = false;
-		this.#musicController.stop(Priority.LOW);
+		this.#musicController.stop(HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST);
 	}
 
 	/**
@@ -227,16 +227,16 @@ class SoundMachinePlayListController {
 	 * @param {number} k
 	 * @returns {void}
 	 */
-	unknown_5eR(k) {
+	updateVolume(k) {
 		// this function does nothing
 	}
 
 	/**
 	 * @source SoundMachinePlayListController.§_-23Z§
-	 * @param {SongObject} param1
+	 * @param {SongDataEntry} param1
 	 * @param {number} [param2=0]
 	 */
-	unknown_23Z(param1, param2 = 0) {
+	addItem(param1, param2 = 0) {
 		return -1;
 	}
 
@@ -245,7 +245,7 @@ class SoundMachinePlayListController {
 	 * @param {number} param1
 	 * @param {number} param2
 	 */
-	unknown_5IP(param1, param2) {
+	moveItem(param1, param2) {
 		// this function does nothing
 	}
 
@@ -253,17 +253,17 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-6v§
 	 * @param {number} k
 	 */
-	unknown_6v(k) {
+	removeItem(k) {
 		// this function does nothing
 	}
 
 	/**
 	 * @source SoundMachinePlayListController.§_-1wQ§
-	 * @param {Unknown_3wA} k
+	 * @param {SoundCompleteEvent} k
 	 */
-	#handleSongComplete(k) {
+	#onSongFinishedPlayingEvent(k) {
 		if (k.id === this.#currentSongId) {
-			this.#getNextSongAndPlay();
+			this.#playNextSong();
 		}
 	}
 
@@ -272,7 +272,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-1qh§
 	 * @param {SongInfoEvent} songInfoEvent - The song info event.
 	 */
-	#handleSongInfo(songInfoEvent) {
+	#onSongInfoReceivedEvent(songInfoEvent) {
 		if (this.#playlist === null || this.#playlist.length === 0) {
 			return;
 		}
@@ -295,11 +295,11 @@ class SoundMachinePlayListController {
 	 * Get the next song to play and start playing it.
 	 * @source SoundMachinePlayListController.§_-1MN§
 	 */
-	#getNextSongAndPlay() {
-		const nextSong = this.#getSongToPlay();
+	#playNextSong() {
+		const nextSong = this.#getNextEntry();
 		if (nextSong !== null) {
 			this.#currentSongId = nextSong.id;
-			this.#playSong(this.#currentSongId);
+			this.#playCurrentSongAndNotify(this.#currentSongId);
 		}
 	}
 
@@ -308,20 +308,20 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-64G§
 	 * @param {number} songId - The ID of the song to play.
 	 */
-	#playSong(songId) {
-		const songToPlay = this.getSongById(songId);
+	#playCurrentSongAndNotify(songId) {
+		const songToPlay = this.getEntryWithId(songId);
 		if (songToPlay === null) {
 			return;
 		}
 
-		const originalVolume = songToPlay.volume;
-		songToPlay.volume = 0;
+		const unknown_1 = songToPlay.startPlayHeadPos;
+		songToPlay.startPlayHeadPos = 0;
 
 		if (
-			this.#musicController.playTraxSong(
+			this.#musicController.playSong(
 				songId,
-				Priority.LOW,
-				originalVolume,
+				HabboMusicPrioritiesEnum.PRIORITY_ROOM_PLAYLIST,
+				unknown_1,
 				0,
 				0,
 				0
@@ -340,7 +340,7 @@ class SoundMachinePlayListController {
 	 * Get the next song in the playlist.
 	 * @source SoundMachinePlayListController.§_-1DP§
 	 */
-	#getSongToPlay() {
+	#getNextEntry() {
 		if (this.#playlist === null || this.#playlist.length === 0) {
 			return null;
 		}
@@ -365,7 +365,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-024§
 	 * @param {number} index - The index of the song to retrieve.
 	 */
-	getSongAtIndex(index) {
+	getEntry(index) {
 		if (
 			this.#playlist === null ||
 			index < 0 ||
@@ -381,7 +381,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-n-§
 	 * @param {number} id - The ID of the song to retrieve.
 	 */
-	getSongById(id) {
+	getEntryWithId(id) {
 		if (this.#playlist === null || this.#playlist.length === 0) {
 			return null;
 		}
@@ -400,7 +400,7 @@ class SoundMachinePlayListController {
 	 * Send a command to get the sound machine's playlist.
 	 * @source SoundMachinePlayListController.§_-1lm§
 	 */
-	getPlayList() {
+	requestPlayList() {
 		if (this.#connection === null) {
 			return;
 		}
@@ -408,18 +408,18 @@ class SoundMachinePlayListController {
 	}
 
 	/**
-	 * Convert an array of playlist entries to an array of SongObject instances.
+	 * Convert an array of playlist entries to an array of SongDataEntry instances.
 	 * @source SoundMachinePlayListController.§_-45K§
 	 * @param {PlayListEntry[]} entries - An array of playlist entries to convert.
 	 */
-	#convertEntries(entries) {
-		const songObjects = [];
+	#convertParserPlayList(entries) {
+		const songEntries = [];
 		for (const entry of entries) {
-			songObjects.push(
-				new SongObject(entry.id, entry.length, entry.name, entry.creator, null)
+			songEntries.push(
+				new SongDataEntry(entry.id, entry.length, entry.name, entry.creator, null)
 			);
 		}
-		return songObjects;
+		return songEntries;
 	}
 
 	/**
@@ -427,7 +427,7 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-4sW§
 	 * @param {HPlayListEvent} event - The playlist event to handle.
 	 */
-	#handlePlaylistEvent(event) {
+	#onPlayListMessage(event) {
 		const playListParser = event.getParser();
 		if (!playListParser) {
 			return;
@@ -440,7 +440,7 @@ class SoundMachinePlayListController {
 			return;
 		}
 
-		this.#playlist = this.#convertEntries(entries);
+		this.#playlist = this.#convertParserPlayList(entries);
 		let totalLength = 0;
 
 		for (const entry of this.#playlist) {
@@ -462,7 +462,7 @@ class SoundMachinePlayListController {
 			}
 
 			this.#currentSongId = entry.id;
-			entry.syncPosition = Number(synchronizationCount) / 1000;
+			entry.startPlayHeadPos = Number(synchronizationCount) / 1000;
 			break;
 		}
 
@@ -470,7 +470,7 @@ class SoundMachinePlayListController {
 			new HabboMusicEvents(HabboMusicEvents.PLUE_PLAY_LIST_UPDATED)
 		);
 		if (entry !== null && this.#isPlaying) {
-			this.#playSong(entry.id);
+			this.#playCurrentSongAndNotify(entry.id);
 		}
 	}
 
@@ -479,9 +479,9 @@ class SoundMachinePlayListController {
 	 * @source SoundMachinePlayListController.§_-3wL§
 	 * @param {HPlayListSongAddedEvent} event - The playlist song added event to handle.
 	 */
-	#handlePlaylistAddedSong(event) {
+	#onPlayListSongAddedMessage(event) {
 		const songAddedParser = event.getParser();
-		const newSong = new SongObject(
+		const newSong = new SongDataEntry(
 			songAddedParser.entry.id,
 			songAddedParser.entry.length,
 			songAddedParser.entry.name,
@@ -503,9 +503,9 @@ class SoundMachinePlayListController {
 			return;
 		}
 		if (this.#playlist.length === 1) {
-			this.#playSong(newSong.id);
+			this.#playCurrentSongAndNotify(newSong.id);
 		} else {
-			this.restartAndPlayNext(newSong.id);
+			this.checkSongPlayState(newSong.id);
 		}
 	}
 }

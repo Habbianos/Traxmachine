@@ -54,7 +54,7 @@ class TraxSample {
 	 *
 	 * @source TraxSample.§_-4PC§
 	 */
-	static get #UNKNOWN_STATIC_CONSTANT() {
+	static get #FADEOUT_LENGTH() {
 		return 32;
 	}
 
@@ -213,9 +213,9 @@ class TraxSample {
 				sampleValue = (sampleValue * (j - 1)) / j + nextValue / j;
 			}
 
-			if (i >= numSamples - 1 - TraxSample.#UNKNOWN_STATIC_CONSTANT) {
+			if (i >= numSamples - 1 - TraxSample.#FADEOUT_LENGTH) {
 				sampleValue *=
-					(numSamples - i - 1) / TraxSample.#UNKNOWN_STATIC_CONSTANT;
+					(numSamples - i - 1) / TraxSample.#FADEOUT_LENGTH;
 			}
 
 			let adjustedSample = Math.trunc((sampleValue + 1) / sampleScale);
@@ -245,7 +245,7 @@ class TraxSample {
 	 * @param {number} length - The number of samples to decode.
 	 * @param {number} inputIndex - The input index for TraxSample data.
 	 */
-	processTraxSampleData(output, startIndex, length, inputIndex) {
+	setSample(output, startIndex, length, inputIndex) {
 		if (output == null || this.#sampleData == null) {
 			return inputIndex;
 		}
@@ -371,7 +371,7 @@ class TraxSample {
 	 * @param {number} length - The number of samples to apply.
 	 * @param {number} inputIndex - The input index for TraxSample data.
 	 */
-	applyTraxSampleDataToOutput(output, startIndex, length, inputIndex) {
+	addSample(output, startIndex, length, inputIndex) {
 		if (output == null || this.#sampleData == null) {
 			return inputIndex;
 		}
@@ -482,7 +482,7 @@ class TraxSample {
 	 * @param {number} id - The ID to be associated.
 	 * @param {number} preparationTime - The preparation time to be updated.
 	 */
-	associateID(id, preparationTime) {
+	setUsageFromSong(id, preparationTime) {
 		if (this.#soundIds == null) {
 			return;
 		}
@@ -497,7 +497,7 @@ class TraxSample {
 	 * @param {number} id - The ID to be checked.
 	 * @returns {boolean} - True if the ID is associated, otherwise, False.
 	 */
-	checkIDAssociation(id) {
+	isUsedFromSong(id) {
 		if (this.#soundIds == null) {
 			return false;
 		}

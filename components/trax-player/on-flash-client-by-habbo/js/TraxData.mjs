@@ -1,5 +1,5 @@
 import { TraxChannel } from './TraxChannel.mjs';
-import { TraxNote } from './TraxNote.mjs';
+import { TraxChannelItem } from './TraxChannelItem.mjs';
 
 /**
  * Class representing audio track data.
@@ -10,7 +10,7 @@ class TraxData {
 	 * @source TraxData.§_-2fH§
 	 * @type {TraxChannel[]}
 	 */
-	#tracks = [];
+	#channels = [];
 
 	/**
 	 * @source TraxData.§_-4PU§
@@ -55,10 +55,10 @@ class TraxData {
 					const noteType = parseInt(noteData[0]);
 					const noteValue = parseInt(noteData[1]);
 
-					track.addNote(new TraxNote(noteType, noteValue));
+					track.addChannelItem(new TraxChannelItem(noteType, noteValue));
 				}
 
-				this.#tracks.push(track);
+				this.#channels.push(track);
 			}
 		}
 	}
@@ -68,17 +68,17 @@ class TraxData {
 	 * @source TraxData.§_-1Sl§
 	 */
 	get channels() {
-		return this.#tracks;
+		return this.#channels;
 	}
 
 	/**
 	 * Gets the list of note IDs in the track.
 	 * @source TraxData.§_-5y4§
 	 */
-	getNoteIds() {
+	getSampleIds() {
 		const noteIds = [];
-		for (let i = 0; i < this.#tracks.length; i++) {
-			const track = this.#tracks[i];
+		for (let i = 0; i < this.#channels.length; i++) {
+			const track = this.#channels[i];
 			for (let j = 0; j < track.noteCount; j++) {
 				const note = track.getNoteAt(j);
 				if (!noteIds.includes(note.id)) {
@@ -101,7 +101,7 @@ class TraxData {
 	 * Checks if the track is compressed.
 	 * @source TraxData.§_-6dH§
 	 */
-	get isCompressed() {
+	get metaCutMode() {
 		return this.#metaData.get('c') === '1';
 	}
 
@@ -109,7 +109,7 @@ class TraxData {
 	 * Gets the track type.
 	 * @source TraxData.§_-4Ob§
 	 */
-	get getTrackType() {
+	get metaTempo() {
 		return parseInt(this.#metaData.get('t'));
 	}
 }

@@ -1,4 +1,4 @@
-import { TraxNote } from './TraxNote.mjs';
+import { TraxChannelItem } from './TraxChannelItem.mjs';
 
 /**
  * Class representing an audio track channel.
@@ -13,33 +13,33 @@ class TraxChannel {
 
 	/**
 	 * @source TraxChannel.§_-0QS§
-	 * @type {TraxNote[]}
+	 * @type {TraxChannelItem[]}
 	 */
-	#notes;
+	#items;
 
 	/**
 	 * @param {number} id - The ID of the audio track channel.
 	 */
 	constructor(id) {
 		this.#id = id;
-		this.#notes = [];
+		this.#items = [];
 	}
 
 	/**
-	 * Get the number of notes in the channel.
+	 * Get the number of items in the channel.
 	 * @source TraxChannel.§_-2eV§
 	 */
 	get noteCount() {
-		return this.#notes.length;
+		return this.#items.length;
 	}
 
 	/**
 	 * Adds a note to the channel.
 	 * @source TraxChannel.§_-4Uc§
-	 * @param {TraxNote} note - The note to be added to the channel.
+	 * @param {TraxChannelItem} note - The note to be added to the channel.
 	 */
-	addNote(note) {
-		this.#notes.push(note);
+	addChannelItem(note) {
+		this.#items.push(note);
 	}
 
 	/**
@@ -47,8 +47,8 @@ class TraxChannel {
 	 * @source TraxChannel.§_-6Sx§
 	 * @param {number} k - The note index in the channel.
 	 */
-	getNoteAt(k) {
-		return this.#notes[k];
+	getItem(k) {
+		return this.#items[k];
 	}
 }
 

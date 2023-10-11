@@ -1,5 +1,4 @@
 /**
- * Currently maybe the property `title` should be changed to `name`
  * @source §_-3y2§.§_-1dq§
  */
 class SongBase {
@@ -30,11 +29,11 @@ class SongBase {
 	 * @source SongBase.§_-3Xo§
 	 * @type {string}
 	 */
-	#title;
+	#songName;
 
-	/** Gets the music's title. */
-	get title() {
-		return this.#title;
+	/** Gets the music's name. */
+	get name() {
+		return this.#songName;
 	}
 
 	/**
@@ -52,29 +51,29 @@ class SongBase {
 	 * The synchronization position in seconds for the song.
 	 * @source SongBase.§_-0hv§
 	 */
-	#syncPosition = 0.0;
+	#startPlayHeadPos = 0.0;
 
 	/**
 	 * @source SongBase.§_-UE§
 	 */
-	get syncPosition() {
-		return this.#syncPosition;
+	get startPlayHeadPos() {
+		return this.#startPlayHeadPos;
 	}
 
-	set syncPosition(value) {
-		this.#syncPosition = value;
+	set startPlayHeadPos(value) {
+		this.#startPlayHeadPos = value;
 	}
 
 	/**
 	 * @param {number} id - The music's ID.
 	 * @param {number} length - The music's length in seconds.
-	 * @param {string} title - The music's title.
+	 * @param {string} name - The music's name.
 	 * @param {string} creator - The music's creator.
 	 */
-	constructor(id, length, title, creator) {
+	constructor(id, length, name, creator) {
 		this.#id = id;
 		this.#length = length;
-		this.#title = title;
+		this.#songName = name;
 		this.#creator = creator;
 	}
 }

@@ -16,11 +16,11 @@ class HabboSoundManagerFlash10 {
 	 * @param {string} soundData - The sound data.
 	 * @returns {SoundObject} - The sound object instance.
 	 */
-	getOrCreateSoundObject(soundId, soundData) {
+	loadTraxSong(soundId, soundData) {
 		if (currentSoundObject !== null) {
-			return this.#getCurrentSoundObject(soundId, soundData);
+			return this.#addTraxSongForDownload(soundId, soundData);
 		}
-		const newSoundObject = this.#createSoundObject(soundId, soundData);
+		const newSoundObject = this.#createTraxInstance(soundId, soundData);
 		if (!newSoundObject.ready) {
 			currentSoundObject = newSoundObject;
 			currentSoundId = soundId;
@@ -37,8 +37,8 @@ class HabboSoundManagerFlash10 {
 	 * @param {string} soundData - The sound data.
 	 * @returns {SoundObject} - The sound object instance.
 	 */
-	#getCurrentSoundObject(soundId, soundData) {
-		const newSoundObject = this.#createSoundObject(soundId, soundData, false);
+	#addTraxSongForDownload(soundId, soundData) {
+		const newSoundObject = this.#createTraxInstance(soundId, soundData, false);
 		if (!newSoundObject.ready) {
 			currentSoundObject = newSoundObject;
 		}
@@ -55,7 +55,7 @@ class HabboSoundManagerFlash10 {
 	 * @param {boolean} addToMap - Indicates whether the sound object should be added to the map.
 	 * @returns {SoundObject} - The sound object instance.
 	 */
-	#createSoundObject(soundId, soundData, addToMap = true) {
+	#createTraxInstance(soundId, soundData, addToMap = true) {
 		const traxData = new TraxData(soundData);
 		const traxSequencer = new TraxSequencer(
 			soundId,
@@ -63,8 +63,8 @@ class HabboSoundManagerFlash10 {
 			this.soundManager,
 			events
 		);
-		traxSequencer.isMuted = this.isMuted;
-		this.#initializeSoundObject(traxSequencer, addToMap);
+		traxSequencer.valume = this.genericVolume;
+		this.#validateSampleAvailability(traxSequencer, addToMap);
 		return traxSequencer;
 	}
 
@@ -76,7 +76,7 @@ class HabboSoundManagerFlash10 {
 	 * @param {SoundObject} soundObject - The sound object to initialize.
 	 * @param {boolean} addToMap - Indicates whether the sound object should be added to the map.
 	 */
-	#initializeSoundObject(soundObject, addToMap) {
+	#validateSampleAvailability(soundObject, addToMap) {
 		const traxData = soundObject.traxData;
 		const missingSamples = [];
 		for (const note of traxData.getNotes()) {

@@ -1,4 +1,4 @@
-import { LoopInfo } from './LoopInfo.mjs';
+import { TraxChannelSample } from './TraxChannelSample.mjs';
 import { SoundObject } from './interface/SoundObject.mjs';
 import { TraxData } from './TraxData.mjs';
 import { TraxSample } from './TraxSample.mjs';
@@ -12,26 +12,23 @@ import { HabboMusicEvents } from './HabboMusicEvents.mjs';
  */
 class TraxSequencer extends SoundObject {
 	/**
-	 * Audio sampling rate (in Hz).
 	 * @source TraxSequencer.§_-57W§
 	 */
-	static get #SAMPLE_RATE() {
+	static get #SAMPLES_PER_SECOND() {
 		return 44100;
 	}
 
 	/**
-	 * Audio buffer size.
 	 * @source TraxSequencer.§_-1WZ§
 	 */
-	static get #BUFFER_SIZE() {
+	static get #BUFFER_LENGTH() {
 		return 8192;
 	}
 
 	/**
-	 * Default sample rate for soundtracks.
 	 * @source TraxSequencer.§_-6h1§
 	 */
-	static get #DEFAULT_SAMPLE_RATE() {
+	static get #SAMPLES_BAR_LENGTH() {
 		return 88000;
 	}
 
@@ -39,7 +36,7 @@ class TraxSequencer extends SoundObject {
 	 * Sample rate for soundtrack playback.
 	 * @source TraxSequencer.§_-284§
 	 */
-	static get #PLAYBACK_SAMPLE_RATE() {
+	static get #BAR_LENGTH() {
 		return 88000;
 	}
 
@@ -47,16 +44,16 @@ class TraxSequencer extends SoundObject {
 	 * Integer vector for audio buffer.
 	 * @source TraxSequencer.§_-0XL§
 	 */
-	static get #AUDIO_BUFFER() {
-		return new Array(TraxSequencer.#BUFFER_SIZE).fill(0);
+	static get #MIXING_BUFFER() {
+		return new Array(TraxSequencer.#BUFFER_LENGTH).fill(0);
 	}
 
 	/**
 	 * Integer vector for output audio buffer.
 	 * @source TraxSequencer.§_-5-L§
 	 */
-	static get #OUTPUT_BUFFER() {
-		return new Array(TraxSequencer.#BUFFER_SIZE).fill(0);
+	static get #INTERPOLATION_BUFFER() {
+		return new Array(TraxSequencer.#BUFFER_LENGTH).fill(0);
 	}
 
 	/**
@@ -141,11 +138,11 @@ class TraxSequencer extends SoundObject {
 	#position = 0;
 
 	set position(p) {
-		this.#position = p * TraxSequencer.#SAMPLE_RATE;
+		this.#position = p * TraxSequencer.#SAMPLES_PER_SECOND;
 	}
 
 	get position() {
-		return this.#position / TraxSequencer.#SAMPLE_RATE;
+		return this.#position / TraxSequencer.#SAMPLES_PER_SECOND;
 	}
 
 	/**
@@ -181,7 +178,7 @@ class TraxSequencer extends SoundObject {
 	#duration = 0;
 
 	get length() {
-		return this.#duration / TraxSequencer.#SAMPLE_RATE;
+		return this.#duration / TraxSequencer.#SAMPLES_PER_SECOND;
 	}
 
 	/**
@@ -209,12 +206,12 @@ class TraxSequencer extends SoundObject {
 	#bufferingRate = 0;
 
 	get bufferingRateInSeconds() {
-		return this.#bufferingRate / TraxSequencer.#SAMPLE_RATE;
+		return this.#bufferingRate / TraxSequencer.#SAMPLES_PER_SECOND;
 	}
 
 	/** @param {number} value */
 	set bufferingRateInSeconds(value) {
-		this.#bufferingRate = Math.round(value * TraxSequencer.#SAMPLE_RATE);
+		this.#bufferingRate = Math.round(value * TraxSequencer.#SAMPLES_PER_SECOND);
 	}
 
 	/**
@@ -224,12 +221,12 @@ class TraxSequencer extends SoundObject {
 	#mutedRate = 0;
 
 	get mutedRateInSeconds() {
-		return this.#mutedRate / TraxSequencer.#SAMPLE_RATE;
+		return this.#mutedRate / TraxSequencer.#SAMPLES_PER_SECOND;
 	}
 
 	/** @param {number} value */
 	set mutedRateInSeconds(value) {
-		this.#mutedRate = Math.round(value * TraxSequencer.#SAMPLE_RATE);
+		this.#mutedRate = Math.round(value * TraxSequencer.#SAMPLES_PER_SECOND);
 	}
 
 	/**
@@ -264,13 +261,13 @@ class TraxSequencer extends SoundObject {
 	 * Indicates whether the soundtrack data is compressed.
 	 * @source TraxSequencer.§_-3mP§
 	 */
-	#isDataCompressed = false;
+	#cutMode = false;
 
 	/**
 	 * Keeps track of the position of the last processed SampleData event during playback.
 	 * @source TraxSequencer.§_-31r§
 	 */
-	#lastSampleDataPosition = 0;
+	#expectedStreamPosition = 0;
 
 	/**
 	 * Keeps track of audio buffer under run occurrences during playback.
@@ -302,11 +299,11 @@ class TraxSequencer extends SoundObject {
 		}
 		if (!this.#prepared) {
 			if (this.#traxData !== null) {
-				this.#isDataCompressed = false;
+				this.#cutMode = false;
 				if (this.#traxData.hasMetaData) {
-					this.#isDataCompressed = this.#traxData.isCompressed;
+					this.#cutMode = this.#traxData.metaCutMode;
 				}
-				if (this.#isDataCompressed) {
+				if (this.#cutMode) {
 					if (!this.#prepareSequence()) {
 						console.log('Cannot start playback, prepare sequence failed!');
 						return false;
@@ -352,7 +349,7 @@ class TraxSequencer extends SoundObject {
 				sample.associateID(this.#soundId, currentTime);
 
 				if (sample !== undefined && sample !== null) {
-					const bufferSize = this.#calculateSampleSize(sample.length);
+					const bufferSize = this.#getSampleBars(sample.length);
 					const sampleLength = channel.notes[i].length / bufferSize;
 
 					for (let j = 0; j < sampleLength; j++) {
@@ -361,7 +358,7 @@ class TraxSequencer extends SoundObject {
 						}
 
 						bufferIncrement += bufferSize;
-						bufferIndex = bufferIncrement * TraxSequencer.#PLAYBACK_SAMPLE_RATE;
+						bufferIndex = bufferIncrement * TraxSequencer.#BAR_LENGTH;
 					}
 
 					if (this.#duration < bufferIndex) {
@@ -414,7 +411,7 @@ class TraxSequencer extends SoundObject {
 				if (sample !== undefined && sample !== null) {
 					let bufferPosition = bufferIncrement;
 					let unknownBufferIndex = bufferIndex;
-					let sampleSize = this.#calculateSampleSize(sample.length);
+					let sampleSize = this.#getSampleBars(sample.length);
 
 					for (
 						let sampleLength = channel.notes[i].length;
@@ -427,7 +424,7 @@ class TraxSequencer extends SoundObject {
 						}
 						bufferPosition += sampleSize;
 						unknownBufferIndex =
-							bufferPosition * TraxSequencer.#PLAYBACK_SAMPLE_RATE;
+							bufferPosition * TraxSequencer.#BAR_LENGTH;
 
 						if (bufferPosition > bufferIncrement + sampleLength) {
 							isContinuous = true;
@@ -435,7 +432,7 @@ class TraxSequencer extends SoundObject {
 					}
 
 					bufferIncrement += channel.notes[i].length;
-					bufferIndex = bufferIncrement * TraxSequencer.#PLAYBACK_SAMPLE_RATE;
+					bufferIndex = bufferIncrement * TraxSequencer.#BAR_LENGTH;
 
 					if (this.#duration < bufferIndex) {
 						this.#duration = bufferIndex;
@@ -464,9 +461,9 @@ class TraxSequencer extends SoundObject {
 		if (!this.prepare()) {
 			return false;
 		}
-		this.#abortStopTimeout();
+		this.#removeFadeoutStopTimer();
 		if (this.#soundChannel !== null) {
-			this.#finalizePlayback();
+			this.#stopImmediately();
 		}
 		if (this.#bufferingRate > 0) {
 			this.#paused = true;
@@ -479,8 +476,8 @@ class TraxSequencer extends SoundObject {
 			SampleDataEvent.SAMPLE_DATA,
 			this.#onSampleData
 		);
-		this.#startTime = k * TraxSequencer.#SAMPLE_RATE;
-		this.#lastSampleDataPosition = 0;
+		this.#startTime = k * TraxSequencer.#SAMPLES_PER_SECOND;
+		this.#expectedStreamPosition = 0;
 		this.#audioBufferUnderRuns = 0;
 		this.#soundChannel = this.#sound.play();
 		this.volume = this.#volume;
@@ -504,9 +501,9 @@ class TraxSequencer extends SoundObject {
 	/** Stops the playback of the soundtrack. */
 	stop() {
 		if (this.#mutedRate > 0 && !this.#isRenderingPaused) {
-			this.#scheduleStop();
+			this.#stopWithFadeout();
 		} else {
-			this.#stopPlayback();
+			this.#playingComplete();
 		}
 		return true;
 	}
@@ -515,8 +512,8 @@ class TraxSequencer extends SoundObject {
 	 * Ends playback, pauses rendering, and cleans up playback-related resources.
 	 * @source TraxSequencer.§_-6UX§
 	 */
-	#finalizePlayback() {
-		this.#clearBufferingTimer();
+	#stopImmediately() {
+		this.#removeStopTimer();
 		if (this.#soundChannel !== null) {
 			this.#soundChannel.stop();
 			this.#soundChannel = null;
@@ -531,14 +528,14 @@ class TraxSequencer extends SoundObject {
 	 *
 	 * @source TraxSequencer.§_-2H6§
 	 */
-	#scheduleStop() {
+	#stopWithFadeout() {
 		if (this.#stopTimeout === null) {
 			this.#isRenderingPaused = true;
 			this.#mutedOffset = 0;
 			this.#stopTimeout = setTimeout(
-				this.#handleStopPlaybackTimeout,
+				this.#onFadeOutComplete,
 				this.#bufferDelay +
-					this.#mutedRate / (TraxSequencer.#SAMPLE_RATE / 1000)
+					this.#mutedRate / (TraxSequencer.#SAMPLES_PER_SECOND / 1000)
 			);
 		}
 	}
@@ -548,18 +545,18 @@ class TraxSequencer extends SoundObject {
 	 * @source TraxSequencer.§_-68F§
 	 * @param {number} length - The length of the sample.
 	 */
-	#calculateSampleSize(length) {
-		if (this.#isDataCompressed) {
-			return Math.round(length / TraxSequencer.#DEFAULT_SAMPLE_RATE);
+	#getSampleBars(length) {
+		if (this.#cutMode) {
+			return Math.round(length / TraxSequencer.#SAMPLES_BAR_LENGTH);
 		}
-		return Math.ceil(length / TraxSequencer.#DEFAULT_SAMPLE_RATE);
+		return Math.ceil(length / TraxSequencer.#SAMPLES_BAR_LENGTH);
 	}
 
 	/**
 	 * Calculates the loop start indices for each channel.
 	 * @source TraxSequencer.§_-4Kg§
 	 */
-	#calculateLoopStartIndices() {
+	#getChannelSequenceOffsets() {
 		const loopStartIndices = [];
 
 		if (this.#additionalSampleInfo !== null) {
@@ -587,14 +584,14 @@ class TraxSequencer extends SoundObject {
 	 * Processes audio data for playback.
 	 * @source TraxSequencer.§_-0Qn§
 	 */
-	#processAudio() {
+	#mixChannelsIntoBuffer() {
 		if (this.#additionalSampleInfo === null) {
 			return;
 		}
 
-		const loopStartIndices = this.#calculateLoopStartIndices();
+		const loopStartIndices = this.#getChannelSequenceOffsets();
 		const numChannels = this.#additionalSampleInfo.length;
-		/** @type {LoopInfo} */
+		/** @type {TraxChannelSample} */
 		let loopInfo = null;
 
 		for (
@@ -615,11 +612,11 @@ class TraxSequencer extends SoundObject {
 				if (sample.id === 0 || currentPosition < 0) {
 					loopInfo = null;
 				} else {
-					loopInfo = new LoopInfo(sample, currentPosition);
+					loopInfo = new TraxChannelSample(sample, currentPosition);
 				}
 			}
 
-			let bufferSize = TraxSequencer.#BUFFER_SIZE;
+			let bufferSize = TraxSequencer.#BUFFER_LENGTH;
 
 			if (this.#duration - this.#position < bufferSize) {
 				bufferSize = this.#duration - this.#position;
@@ -643,20 +640,20 @@ class TraxSequencer extends SoundObject {
 				if (channelIndex === numChannels - 1) {
 					if (loopInfo !== null) {
 						loopInfo.processTraxSampleData(
-							TraxSequencer.#AUDIO_BUFFER,
+							TraxSequencer.#MIXING_BUFFER,
 							i,
 							loopLength
 						);
 						i += loopLength;
 					} else {
 						for (let j = 0; j < loopLength; j++) {
-							TraxSequencer.#AUDIO_BUFFER[i++] = 0;
+							TraxSequencer.#MIXING_BUFFER[i++] = 0;
 						}
 					}
 				} else {
 					if (loopInfo !== null) {
 						loopInfo.applyTraxSampleDataToOutput(
-							TraxSequencer.#AUDIO_BUFFER,
+							TraxSequencer.#MIXING_BUFFER,
 							i,
 							loopLength
 						);
@@ -670,7 +667,7 @@ class TraxSequencer extends SoundObject {
 					if (sample === null || sample.id === 0) {
 						loopInfo = null;
 					} else {
-						loopInfo = new LoopInfo(sample, 0);
+						loopInfo = new TraxChannelSample(sample, 0);
 					}
 				}
 			}
@@ -683,7 +680,7 @@ class TraxSequencer extends SoundObject {
 	 * based on the current position relative to the duration of the soundtrack and other factors.
 	 * @source TraxSequencer.§_-6Do§
 	 */
-	#updatePlaybackState() {
+	#checkSongFinishing() {
 		const k =
 			this.#duration < this.#startTime
 				? Math.trunc(this.#duration)
@@ -693,7 +690,7 @@ class TraxSequencer extends SoundObject {
 
 		if (
 			this.#position >
-				k + this.#bufferDelay * (TraxSequencer.#SAMPLE_RATE / 1000) &&
+				k + this.#bufferDelay * (TraxSequencer.#SAMPLES_PER_SECOND / 1000) &&
 			!this.#isRenderingPaused
 		) {
 			this.#isRenderingPaused = true;
@@ -703,7 +700,7 @@ class TraxSequencer extends SoundObject {
 				this.#bufferingTimer = null;
 			}
 
-			this.#bufferingTimer = setTimeout(this.#onBufferingComplete, 2);
+			this.#bufferingTimer = setTimeout(this.#onPlayingComplete, 2);
 		} else if (this.#position > k - this.#mutedRate && !this.#muted) {
 			this.#isRenderingPaused = false;
 			this.#muted = true;
@@ -717,17 +714,17 @@ class TraxSequencer extends SoundObject {
 	 * @param {SampleDataEvent} event - The received sample data event.
 	 */
 	#onSampleData(event) {
-		if (event.position > this.#lastSampleDataPosition) {
+		if (event.position > this.#expectedStreamPosition) {
 			++this.#audioBufferUnderRuns;
 			console.log('Audio buffer under run...');
-			this.#lastSampleDataPosition = event.position;
+			this.#expectedStreamPosition = event.position;
 		}
 
 		if (this.volume > 0) {
-			this.#processAudio();
+			this.#mixChannelsIntoBuffer();
 		}
 
-		let bufferSize = TraxSequencer.#BUFFER_SIZE;
+		let bufferSize = TraxSequencer.#BUFFER_LENGTH;
 		if (this.#duration - this.#position < bufferSize) {
 			bufferSize = this.#duration - this.#position;
 			if (bufferSize < 0) {
@@ -739,17 +736,17 @@ class TraxSequencer extends SoundObject {
 			bufferSize = 0;
 		}
 
-		this.#updateAudioBuffer(event.data, bufferSize);
+		this.#writeAudioToOutputStream(event.data, bufferSize);
 		this.#position += bufferSize;
-		this.#lastSampleDataPosition += bufferSize;
+		this.#expectedStreamPosition += bufferSize;
 
 		if (this.#soundChannel !== null) {
 			this.#bufferDelay =
-				(event.position / TraxSequencer.#SAMPLE_RATE) * 1000 -
+				(event.position / TraxSequencer.#SAMPLES_PER_SECOND) * 1000 -
 				this.#soundChannel.position;
 		}
 
-		this.#updatePlaybackState();
+		this.#checkSongFinishing();
 	}
 
 	/**
@@ -758,36 +755,36 @@ class TraxSequencer extends SoundObject {
 	 * @param {ArrayBuffer} audioBuffer - The audio buffer to be updated.
 	 * @param {number} bufferSize - The size of the audio buffer.
 	 */
-	#updateAudioBuffer(audioBuffer, bufferSize) {
+	#writeAudioToOutputStream(audioBuffer, bufferSize) {
 		let factor = NaN;
 		let offset = NaN;
 
 		if (bufferSize > 0) {
 			if (!this.#paused && !this.#muted) {
-				this.#fillAudioBuffer(audioBuffer, bufferSize);
+				this.#writeMixingBufferToOutputStream(audioBuffer, bufferSize);
 			} else {
 				if (this.#paused) {
 					factor = 1 / this.#bufferingRate;
 					offset = this.#bufferingOffset / this.#bufferingRate;
-					this.#bufferingOffset += TraxSequencer.#BUFFER_SIZE;
+					this.#bufferingOffset += TraxSequencer.#BUFFER_LENGTH;
 					if (this.#bufferingOffset > this.#bufferingRate) {
 						this.#paused = false;
 					}
 				} else if (this.#muted) {
 					factor = -1 / this.#mutedRate;
 					offset = 1 - this.#mutedOffset / this.#mutedRate;
-					this.#mutedOffset += TraxSequencer.#BUFFER_SIZE;
+					this.#mutedOffset += TraxSequencer.#BUFFER_LENGTH;
 					if (this.#mutedOffset > this.#mutedRate) {
 						this.#mutedOffset = this.#mutedRate;
 					}
 				}
 
-				this.#applyAudioTransformation(audioBuffer, bufferSize, offset, factor);
+				this.#writeMixingBufferToOutputStreamWithFade(audioBuffer, bufferSize, offset, factor);
 			}
 		}
 
 		const silenceValue = 0;
-		for (let i = bufferSize; i < TraxSequencer.#BUFFER_SIZE; i++) {
+		for (let i = bufferSize; i < TraxSequencer.#BUFFER_LENGTH; i++) {
 			audioBuffer[i * 2] = silenceValue; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
 			audioBuffer[i * 2 + 1] = silenceValue; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
 		}
@@ -799,9 +796,9 @@ class TraxSequencer extends SoundObject {
 	 * @param {ArrayBuffer} audioBuffer - The audio buffer to be filled.
 	 * @param {number} bufferSize - The size of the audio buffer.
 	 */
-	#fillAudioBuffer(audioBuffer, bufferSize) {
+	#writeMixingBufferToOutputStream(audioBuffer, bufferSize) {
 		for (let i = 0; i < bufferSize; i++) {
-			const value = TraxSequencer.#AUDIO_BUFFER[i] * TraxSample.AMPLITUDE;
+			const value = TraxSequencer.#MIXING_BUFFER[i] * TraxSample.AMPLITUDE;
 			audioBuffer[i * 2] = value; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
 			audioBuffer[i * 2 + 1] = value; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
 		}
@@ -815,7 +812,7 @@ class TraxSequencer extends SoundObject {
 	 * @param {number} offset - The offset of the audio transformation.
 	 * @param {number} factor - The audio transformation factor.
 	 */
-	#applyAudioTransformation(audioBuffer, bufferSize, offset, factor) {
+	#writeMixingBufferToOutputStreamWithFade(audioBuffer, bufferSize, offset, factor) {
 		let value = 0;
 		let currentIndex = 0;
 
@@ -825,7 +822,7 @@ class TraxSequencer extends SoundObject {
 			}
 
 			value =
-				TraxSequencer.#AUDIO_BUFFER[currentIndex] *
+				TraxSequencer.#MIXING_BUFFER[currentIndex] *
 				TraxSample.AMPLITUDE *
 				offset;
 			offset += factor;
@@ -842,7 +839,7 @@ class TraxSequencer extends SoundObject {
 		} else if (offset > 1) {
 			while (currentIndex < bufferSize) {
 				value =
-					TraxSequencer.#AUDIO_BUFFER[currentIndex] * TraxSample.AMPLITUDE;
+					TraxSequencer.#MIXING_BUFFER[currentIndex] * TraxSample.AMPLITUDE;
 				offset += factor; // AVISO: PODE SER QUE O CÓDIGO ORIGINAL ESPERA QUE ESSE VALOR SEJA ALTERADO NO ESCOPO DE FORA DA CHAMADA DA FUNÇÃO, O QUE NÃO ACONTECERÁ NO JS
 				audioBuffer[currentIndex * 2] = value; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
 				audioBuffer[currentIndex * 2 + 1] = value; // TALVEZ ESSE TIPO DE TRADUÇÃO PARA writeFloat NÃO FUNCIONE, POIS PODE SER QUE O writeFloat SE COMPORTE COMO UM PUSH, OU SEJA, O ÍNDICE DEPENDE DA POSIÇÃO ATUAL
@@ -855,9 +852,9 @@ class TraxSequencer extends SoundObject {
 	 * Handles buffering completion events.
 	 * @source TraxSequencer.§_-64X§
 	 */
-	#onBufferingComplete() {
+	#onPlayingComplete() {
 		if (this.#isRenderingPaused) {
-			this.#stopPlayback();
+			this.#playingComplete();
 		}
 	}
 
@@ -865,19 +862,19 @@ class TraxSequencer extends SoundObject {
 	 * Handles a timeout event to stop the soundtrack playback.
 	 * @source TraxSequencer.§_-2WK§
 	 */
-	#handleStopPlaybackTimeout() {
-		this.#abortStopTimeout();
-		this.#stopPlayback();
+	#onFadeOutComplete() {
+		this.#removeFadeoutStopTimer();
+		this.#playingComplete();
 	}
 
 	/**
 	 * Effectively stops the playback of the soundtrack and concludes the playback.
 	 * @source TraxSequencer.§_-6f9§
 	 */
-	#stopPlayback() {
-		this.#finalizePlayback();
+	#playingComplete() {
+		this.#stopImmediately();
 		this.#eventDispatcher.dispatchEvent(
-			new HabboMusicEvents(
+			new HabboMusicEvents( // SoundCompleteEvent
 				HabboMusicEvents.SCE_TRAX_SONG_COMPLETE,
 				this.#soundId
 			)
@@ -888,7 +885,7 @@ class TraxSequencer extends SoundObject {
 	 * Aborts the stop timeout if it is active by clearing it.
 	 * @source TraxSequencer.§_-6Z6§
 	 */
-	#abortStopTimeout() {
+	#removeFadeoutStopTimer() {
 		if (this.#stopTimeout !== null) {
 			clearTimeout(this.#stopTimeout);
 			this.#stopTimeout = null;
@@ -899,7 +896,7 @@ class TraxSequencer extends SoundObject {
 	 * Clears and removes the buffering timer if it's active.
 	 * @source TraxSequencer.§_-5ra§
 	 */
-	#clearBufferingTimer() {
+	#removeStopTimer() {
 		if (this.#bufferingTimer !== null) {
 			clearTimeout(this.#bufferingTimer);
 			this.#bufferingTimer = null;
