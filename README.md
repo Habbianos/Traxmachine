@@ -30,6 +30,7 @@ However, after Habbo's transition from Shockwave to Flash clients, the Trax syst
  
 - [Trax Editor - RareWert](https://rarewert.de/trax) - Deploy of the Trax Editor present in this repository
 - [Trax Editor - X@JussuC](https://trax-alpha.vercel.app/) - Another awesome Trax Editor remade
+- [WebTrax - laurawebdev](https://laurawebdev.github.io/WebTrax/) - One more Trax Editor with a unique UI
 - [Habborator | Trax](https://www.habborator.org/trax/) - Quickly preview any of the songs and masterclasses
 - [Trax Guide](https://habbohlpcenter.tripod.com/id18.html) - FAQ about Trax
 - [Trax | Habbo Wiki | Fandom](https://habbo.fandom.com/wiki/Trax) - Read about the Trax history
