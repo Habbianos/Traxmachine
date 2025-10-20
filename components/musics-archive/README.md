@@ -155,6 +155,8 @@ These others discs overflow the limit of 4 layers and the limit of 648 for sampl
 ```
 </details>
 
+> The last part of these songs code, `meta,1;c,1`, are custom properties introduced exclusively by these musics (maybe an unreleased editor), where `meta=1` means that it has metadata (these properties), `c=1` means that it has the "cut mode" enabled (samples can have less slots than they would otherwise), and an unseen (and not implemented) property `t=<integer>` that is intended to specify the tempo (velocity) of the music.
+
 Here is the comparasion table for all of them:
 
 | Music                                            | Extra layers | Extra packs | Unreleased samples | Has meta |
