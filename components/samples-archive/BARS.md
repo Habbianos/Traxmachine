@@ -7,6 +7,7 @@ Bellow we have the list of bars recognized by each engine, as a record:
 ## Habbo Flash - Player-only engine
 
 | Sample Id | Length (sec:ms) | Length (data points) | Bars |
+|-|-|-|-|
 | 1 | N/A | 87552 | 1 |
 | 2 | N/A | 175104 | 2 |
 | 3 | N/A | 175104 | 2 |
@@ -751,6 +752,7 @@ Bellow we have the list of bars recognized by each engine, as a record:
 ## traxmachine.com - Editor-only engine
 
 | Sample Id | Length (sec:ms) | Length (data points) | Bars |
+|-|-|-|-|
 | 0 | N/A | N/A | 1 |
 | 1 | N/A | N/A | 1 |
 | 2 | N/A | N/A | 2 |
@@ -1404,6 +1406,7 @@ Bellow we have the list of bars recognized by each engine, as a record:
 ## Trax Radio (Discord) - Player-only engine
 
 | Sample Id | Length (sec:ms) | Length (data points) | Bars |
+|-|-|-|-|
 | 0 | 02:00 | N/A | 1 |
 | 1 | 02:00 | N/A | 1 |
 | 2 | 04:00 | N/A | 2 |
