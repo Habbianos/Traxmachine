@@ -17,6 +17,8 @@ Legend:
 - IG: In-game
 - N/A: Not available
 
+> Note: the actual bars in-game was computed with cut mode disabled. The **current** implementation to calculate the bar count rounds it down if "cut mode" is enabled, and rounds up otherwise.
+
 | Sample Id | OD | RD | AD | AD-IG | OBL | ABL | ABL-IG | OB | AB | AB-IG | Bars Match? |
 |-|-|-|-|-|-|-|-|-|-|-|-|
 | 0 | 02:000 | 01:976 | 01:985 | N/A | 88200 | 87552 | N/A | 1 | 1 | N/A | Yes |
