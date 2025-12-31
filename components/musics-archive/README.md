@@ -159,17 +159,17 @@ These others discs overflow the limit of 4 layers and the limit of 648 for sampl
 
 Here is the comparasion table for all of them:
 
-| Music                                            | Extra layers | Extra packs | Unreleased samples | Has meta |
-| ------------------------------------------------ | :----------: | :---------: | :----------------: | :------: |
-| **Tapes from Goa – Habnosis**                    |      ✔️     |     ✔️     |         ❎        |    ❎   |
-| **Alley Cat in Trouble – Rage Against the Fuse** |      ✔️     |     ✔️     |         ❎        |    ❎   |
-| **Who Dares Stacks – Rage Against the Fuse**     |      ✔️     |     ❎     |         ❎        |    ❎   |
-| **Electric Pixels – Habbo de Gaia**              |      ✔️     |     ✔️     |         ❎        |    ❎   |
-| **Galactic Disco – DJ Bobba feat. Habboway**     |      ✔️     |     ✔️     |         ❎        |    ❎   |
-| **Epic Flail – Habbocalyptica**                  |      ✔️     |     ✔️     |         ❎        |    ❎   |
-| **68B Attack Sub – Habnosis**                    |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
-| **The Habstep – Habnosis**                       |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
-| **Caliente Street – Barrio Bobba**               |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
-| **Habbo Libre – Ana Stan Band**                  |      ✔️     |     ❎     |         ❎        |    ✔️   |
-| **Uuh Aah – DJ Bobba**                           |      ✔️     |     ✔️     |         ❎        |    ✔️   |
-| **Xmas Magic – Silent Aurora**                   |      ✔️     |     ✔️     |         ❎        |    ✔️   |
+| Music                                            | Time  | Extra layers | Extra packs | Unreleased samples | Has meta |
+| ------------------------------------------------ | :---: | :----------: | :---------: | :----------------: | :------: |
+| **Tapes from Goa – Habnosis**                    | 08:32 |      ✔️     |     ✔️     |         ❎        |    ❎   |
+| **Alley Cat in Trouble – Rage Against the Fuse** | 01:56 |      ✔️     |     ✔️     |         ❎        |    ❎   |
+| **Who Dares Stacks – Rage Against the Fuse**     | 01:16 |      ✔️     |     ❎     |         ❎        |    ❎   |
+| **Electric Pixels – Habbo de Gaia**              | 03:32 |      ✔️     |     ✔️     |         ❎        |    ❎   |
+| **Galactic Disco – DJ Bobba feat. Habboway**     | 01:56 |      ✔️     |     ✔️     |         ❎        |    ❎   |
+| **Epic Flail – Habbocalyptica**                  | 03:08 |      ✔️     |     ✔️     |         ❎        |    ❎   |
+| **68B Attack Sub – Habnosis**                    | 04:48 |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
+| **The Habstep – Habnosis**                       | 04:48 |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
+| **Caliente Street – Barrio Bobba**               | 04:08 |      ✔️     |     ✔️     |         ✔️        |    ✔️   |
+| **Habbo Libre – Ana Stan Band**                  | 02:52 |      ✔️     |     ❎     |         ❎        |    ✔️   |
+| **Uuh Aah – DJ Bobba**                           | 02:00 |      ✔️     |     ✔️     |         ❎        |    ✔️   |
+| **Xmas Magic – Silent Aurora**                   | 04:16 |      ✔️     |     ✔️     |         ❎        |    ✔️   |
