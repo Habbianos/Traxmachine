@@ -4,3 +4,9 @@
 [submodule "apps/samples-book/repo"]
 	path = apps/samples-book/repo
 	url = https://github.com/Habbianos/samples-book.git
+[submodule "components/trax-editor/by-alynva/v4/demo"]
+	path = components/trax-editor/by-alynva/v4/demo
+	url = https://github.com/Habbianos/trax-editor-v4-demo.git
+[submodule "components/trax-editor/by-alynva/v4/src"]
+	path = components/trax-editor/by-alynva/v4/src
+	url = https://github.com/Habbianos/trax-editor-v4.git
